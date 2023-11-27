@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestion du parc informatique</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>gestion du parc informatique</h1>
+    </header>
+
+    <!-- entité -->
+    <section class="entite">
+        <h2 class="titre">entité</h2>
+        <div class="entite-df">
+
+            <article class="entite-item">
+                <div class="nom">administrateur</div>
+                <div class="property">
+                    <div class="item id">matricule_admin</div>
+                    <div class="item">nom_admin</div>
+                    <div class="item">prenom_admin</div>
+                    <div class="item">poste_occupe_admin</div>
+                    <div class="item">service_admin</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">commande</div>
+                <div class="property">
+                    <div class="item id">numero_commande</div>
+                    <div class="item">libelle_commande</div>
+                </div>
+            </article>
+            
+            <article class="entite-item">
+                <div class="nom">fournisseur</div>
+                <div class="property">
+                    <div class="item id">matricule_fournisseur</div>
+                    <div class="item">nom_fournisseur</div>
+                    <div class="item">prenom_fournisseur</div>
+                    <div class="item">email</div>
+                    <div class="item">telephone</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">equipement</div>
+                <div class="property">
+                    <div class="item id">code_equit</div>
+                    <div class="item">nom</div>
+                    <div class="item">caracteristique</div>
+                    <div class="item">du cahier inventaire</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">intervention</div>
+                <div class="property">
+                    <div class="item id">numero_int</div>
+                    <div class="item">libelle_int</div>
+                    <div class="item">date</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">logiciel</div>
+                <div class="property">
+                    <div class="item id">nom</div>
+                    <div class="item">libelle_log</div>
+                    <div class="item">license</div>
+                    <div class="item">license_init</div>
+                    <div class="item">license_expire</div>
+                </div>
+            </article>
+           
+            <article class="entite-item">
+                <div class="nom">type_equipement</div>
+                <div class="property">
+                    <div class="item id">nom_type</div>
+                    <div class="item">libelle_type</div>
+                </div>
+            </article>
+            
+            <article class="entite-item">
+                <div class="nom">utilisateur</div>
+                <div class="property">
+                    <div class="item id">matricule_user</div>
+                    <div class="item">nom_user</div>
+                    <div class="item">prenom_user</div>
+                    <div class="item">poste_occupe_user</div>
+                    <div class="item">service_user</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">ordinateur</div>
+                <div class="property">
+                    <div class="item id">code_ordi</div>
+                    <div class="item">nom</div>
+                    <div class="item">caracteristique</div>
+                    <div class="item">du cahier inventaire</div>
+                </div>
+            </article>
+            <article class="entite-item">
+                <div class="nom">direction</div>
+                <div class="property">
+                    <div class="item id">nom_dir</div>
+                    <div class="item">libelle_dir</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">servise</div>
+                <div class="property">
+                    <div class="item id">nom_sev</div>
+                    <div class="item">libelle_ser</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">batiment</div>
+                <div class="property">
+                    <div class="item id">nom_bat</div>
+                    <div class="item">libelle_bat</div>
+                </div>
+            </article>
+            
+        </div>
+    </section>
+
+    <!-- régle de gestion -->
+    <section class="rg">
+        <h2 class="titre">régle de gestion</h2>
+        
+        <article class="rg-item">
+            <div class="rg-titre">utilisateur<span><=></span>equipement</div>
+            <p>
+                un <span class="entite">utilisateur</span> a un ou plusieurs 
+                <span class="entite">equipement</span>
+            </p>
+            <p>
+                un <span class="entite">equipement</span> appartient à un et un seule
+                <span class="entite">utilisateur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">utilisateur<span><=></span>servise</div>
+            <p>
+                un <span class="entite">utilisateur</span> est dans un et un seule
+                <span class="entite">servise</span>
+            </p>
+            <p>
+                un <span class="entite">servise</span> comprend un ou plusieurs
+                <span class="entite">utilisateur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">utilisateur<span><=></span>ordinateur</div>
+            <p>
+                un <span class="entite">utilisateur</span> a un ou plusieurs
+                <span class="entite">ordinateur</span>
+            </p>
+            <p>
+                un <span class="entite">ordinateur</span> appartient à un et un seule
+                <span class="entite">utilisateur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">utilisateur<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">utilisateur</span> peut ne pas demander  
+                <span class="entite">intervention</span> ou en demander plusieurs
+            </p>
+            <p>
+                une <span class="entite">intervention</span> 
+                est demande par un et un seule 
+                <span class="entite">utilisateur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">administrateur<span><=></span>commande</div>
+            <p>
+                un <span class="entite">administrateur</span> peut ne pas passer de 
+                <span class="entite">commande</span> ou en passer plusieurs
+                
+            </p>
+            <p>
+                une <span class="entite">commande</span> est passé par un et un seule 
+                <span class="entite">administrateur</span>
+            </p>
+        </article>
+        
+        <article class="rg-item">
+            <div class="rg-titre"> administrateur<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">administrateur</span> peut ne pas approuver 
+                <span class="entite">intervention</span> ou en approuvé plusieurs 
+            </p>
+            <p>
+                une <span class="entite">intervention</span> est approuvée
+                par un et un seule <span class="entite">administrateur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">fournisseur<span><=></span>commande</div>
+            <p>
+                un <span class="entite">fournisseur</span> peut ne pas livrer de 
+                <span class="entite">commande</span> ou en récevoir plusieurs
+            </p>
+            <p>
+                une <span class="entite">commande</span> est livrée par un et un seule 
+                <span class="entite">fournisseur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">servise<span><=></span>direction</div>
+            <p>
+                un <span class="entite">servise</span> est affilié a une
+                <span class="entite">direction</span>
+            </p>
+            <p>
+                une <span class="entite">direction</span> a un ou plusieurs
+                <span class="entite">servise</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">servise<span><=></span>batiment</div>
+            <p>
+                un <span class="entite">servise</span> est situé dans un
+                <span class="entite">batiment</span>
+            </p>
+            <p>
+                une <span class="entite">batiment</span> abrite un ou plusieurs
+                <span class="entite">servise</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">equipement<span><=></span>type_equipement</div>
+            <p>
+                un <span class="entite">equipement</span> a un 
+                <span class="entite">type_equipement</span> 
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">equipement<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">equipement</span> peut ne pas faire l'objet de
+                d'<span class="entite">intervention</span> ou en faire plusieurs 
+            </p>
+            <p>
+                une <span class="entite">intervention</span> est faite un ou 
+                plusieurs <span class="entite">equipement</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">ordinateur<span><=></span>logiciel</div>
+            <p>
+                un <span class="entite">ordinateur</span> peut ne pas diposer de
+                <span class="entite">logiciel</span> ou en diposer plusieurs 
+            </p>
+            <p>
+                une <span class="entite">logiciel</span> peut ne pas être installé sur 
+                un <span class="entite">ordinateur</span> ou l'être plusieurs fois
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">ordinateur<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">ordinateur</span> peut ne pas faire l'objet 
+                d'<span class="entite">intervention</span> ou en faire plusieurs 
+            </p>
+            <p>
+                une <span class="entite">intervention</span> est faite sur 
+                aucun ou plusieurs <span class="entite">ordinateur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">logiciel<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">logiciel</span> peut ne pas faire l'objet 
+                d'<span class="entite">intervention</span> ou en faire plusieurs 
+            </p>
+            <p>
+                une <span class="entite">intervention</span> est faite sur 
+                aucun ou plusieurs <span class="entite">logiciel</span>
+            </p>
+        </article>
+        
+    </section>
+
+    <!-- dictionnaire de données -->
+    <section class="dd">
+        <h2 class="titre">dictionnaire de données</h2>
+        <div class="dd-table">
+
+            <div class="dd-num dd-item">
+                <div class="t">n</div>
+                <div class="property"></div>
+            </div>
+
+            <div class="dd-item dd-code">
+                <div class="t">code</div>
+                <div class="property"></div>
+            </div>
+
+            <div class="dd-item dd-sg">
+                <div class="t">signification</div>
+                <div class="property"></div>
+            </div>
+
+            <div class="dd-item dd-type">
+                <div class="t">type</div>
+                <div class="property"></div>
+            </div>
+
+            <div class="dd-item dd-taille">
+                <div class="t">taille</div>
+                <div class="property"></div>
+            </div>
+
+            <div class="dd-item dd-nt">
+                <div class="t">nature</div>
+                <div class="property"></div>
+            </div>
+
+            <div class="dd-item dd-ob">
+                <div class="t">observation</div>
+                <div class="property"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MCD -->
+    <section class="mcd">
+        <h2 class="titre">Modéle concéptuel des données <span>(MCD)</span></h2>
+        <!-- <div class="entite-df">
+            
+            <div class="rls">
+                <article class="entite-item">
+                    <div class="nom">administrateur</div>
+                    <div class="property">
+                        <div class="item id">matricule_admin</div>
+                    </div>
+                </article>
+
+                <article class="relation">
+                    <div class="nom">relation</div>
+                    <div class="property">
+                        <div class="item id">matricule_admin</div>
+                    </div>
+                </article>
+    
+                <article class="entite-item">
+                    <div class="nom">commande</div>
+                    <div class="property">
+                        <div class="item id">numero_commande</div>
+                    </div>
+                </article>
+                
+                <article class="relation">
+                    <div class="nom">relation</div>
+                    <div class="property">
+                        <div class="item id">matricule_admin</div>
+                    </div>
+                </article>
+
+                <article class="entite-item">
+                    <div class="nom">fournisseur</div>
+                    <div class="property">
+                        <div class="item id">matricule_fournisseur</div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="rls">
+                <article class="entite-item">
+                    <div class="nom">equipement</div>
+                    <div class="property">
+                        <div class="item id">code_equit</div>
+                    </div>
+                </article>
+                
+                <article class="relation">
+                    <div class="nom">relation</div>
+                    <div class="property">
+                        <div class="item id">matricule_admin</div>
+                    </div>
+                </article>
+    
+                <article class="entite-item">
+                    <div class="nom">intervention</div>
+                    <div class="property">
+                        <div class="item id">numero_int</div>
+                    </div>
+                </article>
+                
+                <article class="relation">
+                    <div class="nom">relation</div>
+                    <div class="property">
+                        <div class="item id">matricule_admin</div>
+                    </div>
+                </article>
+
+                <article class="entite-item">
+                    <div class="nom">logiciel</div>
+                    <div class="property">
+                        <div class="item id">nom</div>
+                    </div>
+                </article>
+            </div>
+           
+            <article class="entite-item">
+                <div class="nom">type_equipement</div>
+                <div class="property">
+                    <div class="item id">nom_type</div>
+                </div>
+            </article>
+            
+            <article class="entite-item">
+                <div class="nom">utilisateur</div>
+                <div class="property">
+                    <div class="item id">matricule_user</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">ordinateur</div>
+                <div class="property">
+                    <div class="item id">code_ordi</div>
+                </div>
+            </article>
+            <article class="entite-item">
+                <div class="nom">direction</div>
+                <div class="property">
+                    <div class="item id">nom_dir</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">servise</div>
+                <div class="property">
+                    <div class="item id">nom_sev</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">batiment</div>
+                <div class="property">
+                    <div class="item id">nom_bat</div>
+                </div>
+            </article>
+            
+        </div> -->
+        <div class="msg">en conception </div>
+    </section>
+    
+    <footer>
+        <div class="author">copyright <span>kouya tosten</span></div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
