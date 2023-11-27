@@ -51,9 +51,35 @@
                 <div class="nom">equipement</div>
                 <div class="property">
                     <div class="item id">code_equit</div>
-                    <div class="item">nom</div>
-                    <div class="item">caracteristique</div>
-                    <div class="item">du cahier inventaire</div>
+                    <div class="item">nomemplacement</div>
+                    <div class="item">seire</div>
+                    <div class="item">modele</div>
+                    <div class="item">vitesse</div>
+                    <div class="item">etat</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">equipement_reseau</div>
+                <div class="property">
+                    <div class="item id">code_equitR</div>
+                    <div class="item">nom_equitR</div>
+                    <div class="item">seire_equitR</div>
+                    <div class="item">modele_equitR</div>
+                    <div class="item">vitesse_equitR</div>
+                    <div class="item">nombre_port</div>
+                    <div class="item">administrable</div>
+                    <div class="item">onduleur</div>
+                    <div class="item">multiprise</div>
+                    <div class="item">etat_equitR</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">emplacement</div>
+                <div class="property">
+                    <div class="item id">nom_emplacement</div>
+                    <div class="item">libelle_emplacement</div>
                 </div>
             </article>
 
@@ -100,9 +126,14 @@
                 <div class="nom">ordinateur</div>
                 <div class="property">
                     <div class="item id">code_ordi</div>
-                    <div class="item">nom</div>
-                    <div class="item">caracteristique</div>
-                    <div class="item">du cahier inventaire</div>
+                    <div class="item">modele</div>
+                    <div class="item">seri</div>
+                    <div class="item">proceseur</div>
+                    <div class="item">ram</div>
+                    <div class="item">ddur</div>
+                    <div class="item">mac_ip</div>
+                    <div class="item">etat</div>
+                    <div class="item">type_ordi</div>
                 </div>
             </article>
             <article class="entite-item">
@@ -263,6 +294,30 @@
             <p>
                 une <span class="entite">intervention</span> est faite un ou 
                 plusieurs <span class="entite">equipement</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">equipement_reseau<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">equipement_reseau</span> peut ne pas faire l'objet de
+                d'<span class="entite">intervention</span> ou en faire plusieurs 
+            </p>
+            <p>
+                une <span class="entite">intervention</span> est faite un ou 
+                plusieurs <span class="entite">equipement_reseau</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">equipement_reseau<span><=></span>emplacement</div>
+            <p>
+                un <span class="entite">equipement_reseau</span> a un 
+                <span class="entite">emplacement</span>
+            </p>
+            <p>
+                un <span class="entite">emplacement</span> peut ne pas contenir 
+                <span class="entite">equipement_reseau</span> ou en conrenir plusieurs
             </p>
         </article>
 
