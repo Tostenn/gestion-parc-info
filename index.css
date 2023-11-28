@@ -41,13 +41,13 @@ header{
 .dd .dd-table .dd-item,
 :is(.mcd,.entite) .entite-item{
     width: 23%;
+    position: relative;
     text-align: center;
     margin-bottom: 10px;
     border: 1px solid;
 }
 .dd .dd-table .dd-item .t,
-:is(.mcd .entite-item,.entite .entite-item) .nom
-{
+:is(.mcd .entite-item,.entite .entite-item) .nom{
     background-color: var(--cl-code);
     color: var(--cl-blanc);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -59,7 +59,11 @@ header{
     text-transform: capitalize;
 }
 :is(.entite,.mcd) .entite-item .item{
+    position: relative;
     font-family: 'Courier New', Courier, monospace;
+    & .op{
+        right: 0;
+    }
 }
 
 @media screen and (max-width:800px) {
@@ -80,6 +84,7 @@ header{
 }
 
 .rg .rg-item{
+    position: relative;
     margin: 0 0 30px 10px;
 }
 .rg .rg-titre{
@@ -314,4 +319,48 @@ footer .author{
         top: -15px;
         position: absolute;
     };
+}
+
+.entite .op{
+    position: absolute;
+    right: -30px;
+    background-color: var(--cl-red);
+    color: var(--cl-blanc);
+    padding: .2em 0.5em;
+    border-radius: 5px;
+}
+
+.rg .op{
+    position: absolute;
+    font-size: 15px;
+    top: -10px;
+    background-color: var(--cl-red);
+    color: var(--cl-blanc);
+    padding: 0 0.5em;
+    border-radius: 5px;
+    z-index: 2;
+    
+}
+.rg .op::after{
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    border: 1px solid var(--cl-red);
+    color: var(--cl-red);
+    content: 'optionnel';
+    z-index: -1;
+    border-radius: 0 10px 10px 0;
+    width: 0;
+    transition: all .3s;
+    /* display: none; */
+}
+.rg .op:hover::after{
+    /* display: block; */
+    opacity: 1;
+    padding: .3em 0.5em;
+    transition: all .3s;
+    width: auto;
+    margin-left: 10px;
 }
