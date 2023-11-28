@@ -21,23 +21,23 @@
                 <div class="nom">role</div>
                 <div class="property">
                     <div class="item id">num_role</div>
-                    <div class="item">libelle_role</div>
+                    <div class="item">libe_role</div>
                 </div>
             </article>
 
             <article class="entite-item">
                 <div class="nom">etat</div>
                 <div class="property">
-                    <div class="item id">num_etate</div>
-                    <div class="item">libelle_etat</div>
+                    <div class="item id">num_etat</div>
+                    <div class="item">lib_etat</div>
                 </div>
             </article>
             
             <article class="entite-item">
                 <div class="nom">equipement</div>
                 <div class="property">
-                    <div class="item id">code_equit</div>
-                    <div class="item">anne_mise_service</div>
+                    <div class="item id">code_equip</div>
+                    <div class="item">annee_mise_service</div>
                     <div class="item">serie</div>
                     <div class="item">fonction</div>
                     <div class="item">modele</div>
@@ -60,20 +60,19 @@
                 </div>
             </article>
 
-            <article class="entite-item">
+            <article class="entite-item gouba">
                 <div class="nom">emplacement</div>
                 <div class="property">
                     <div class="item id">nom_emplacement</div>
-                    <div class="item">libelle_emplacement</div>
+                    <div class="item">lib_emplacement</div>
                 </div>
             </article>
 
-            <article class="entite-item">
+            <article class="entite-item gouba">
                 <div class="nom">intervention</div>
                 <div class="property">
-                    <div class="item id">numero_int</div>
-                    <div class="item">libelle_int</div>
-                    <div class="item">date</div>
+                    <div class="item id">num_int</div>
+                    <div class="item">lib_int</div>
                 </div>
             </article>
 
@@ -84,29 +83,29 @@
                 </div>
             </article>
 
-            <article class="entite-item">
+            <article class="entite-item gouba">
                 <div class="nom">logiciel</div>
                 <div class="property">
                     <div class="item id">nom</div>
-                    <div class="item">libelle_log</div>
+                    <div class="item">lib_log</div>
                     <div class="item">license</div>
                     <div class="item">license_init</div>
                     <div class="item">license_expire</div>
                 </div>
             </article>
            
-            <article class="entite-item">
+            <article class="entite-item gouba">
                 <div class="nom">type_equipement</div>
                 <div class="property">
                     <div class="item id">nom_type</div>
-                    <div class="item">libelle_type</div>
+                    <div class="item">lib_type</div>
                 </div>
             </article>
             
-            <article class="entite-item">
-                <div class="nom">utilisateur</div>
+            <article class="entite-item gouba">
+                <div class="nom">personnel</div>
                 <div class="property">
-                    <div class="item id">matricule_user</div>
+                    <div class="item id">matr_user</div>
                     <div class="item">nom_user</div>
                     <div class="item">prenom_user</div>
                     <div class="item">poste_occupe_user <span class="op">*</span></div>
@@ -114,13 +113,13 @@
                 </div>
             </article>
 
-            <article class="entite-item">
+            <article class="entite-item gouba">
                 <div class="nom">ordinateur</div>
                 <div class="property">
                     <div class="item id">code_ordi</div>
                     <div class="item">modele</div>
                     <div class="item">seri</div>
-                    <div class="item">proceseur</div>
+                    <div class="item">process</div>
                     <div class="item">ram</div>
                     <div class="item">ddur</div>
                     <div class="item">mac_ip</div>
@@ -129,19 +128,27 @@
                 </div>
             </article>
 
-            <article class="entite-item">
+            <article class="entite-item gouba" >
                 <div class="nom">direction</div>
                 <div class="property">
                     <div class="item id">num_dir</div>
-                    <div class="item">libelle_dir</div>
+                    <div class="item">lib_dir</div>
                 </div>
             </article>
 
-            <article class="entite-item">
-                <div class="nom">servise</div>
+            <article class="entite-item gouba">
+                <div class="nom">Emprunt</div>
+                <div class="property">
+                    <div class="item id">num_emp</div>
+                    <div class="item">lib_emp</div>
+                </div>
+            </article>
+
+            <article class="entite-item gouba">
+                <div class="nom">service</div>
                 <div class="property">
                     <div class="item id">num_sev</div>
-                    <div class="item">libelle_ser</div>
+                    <div class="item">lib_ser</div>
                 </div>
             </article>
 
@@ -150,7 +157,7 @@
                 <div class="nom">batiment </div>
                 <div class="property">
                     <div class="item id">nom_bat</div>
-                    <div class="item">libelle_bat</div>
+                    <div class="item">lib_bat</div>
                 </div>
             </article>
             
@@ -165,23 +172,23 @@
             <div class="rg-titre">utilisateur<span><=></span>equipement</div>
             <p>
                 un <span class="entite">utilisateur</span> a un ou plusieurs 
-                <span class="entite">equipement</span>
+                <span class="entite">equipements</span>
             </p>
             <p>
-                un <span class="entite">equipement</span> appartient à un et un seule
+                un <span class="entite">equipement</span> appartient à un et un seul
                 <span class="entite">utilisateur</span>
             </p>
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">utilisateur<span><=></span>servise</div>
+            <div class="rg-titre">utilisateur<span><=></span>service</div>
             <p>
-                un <span class="entite">utilisateur</span> est dans un et un seule
-                <span class="entite">servise</span>
+                un <span class="entite">utilisateur</span> est dans un et un seul
+                <span class="entite">service</span>
             </p>
             <p>
-                un <span class="entite">servise</span> comprend un ou plusieurs
-                <span class="entite">utilisateur</span>
+                un <span class="entite">service</span> comprend un ou plusieurs
+                <span class="entite">utilisateurs</span>
             </p>
         </article>
 
@@ -189,10 +196,10 @@
             <div class="rg-titre">utilisateur<span><=></span>ordinateur</div>
             <p>
                 un <span class="entite">utilisateur</span> a un ou plusieurs
-                <span class="entite">ordinateur</span>
+                <span class="entite">ordinateurs</span>
             </p>
             <p>
-                un <span class="entite">ordinateur</span> appartient à un et un seule
+                un <span class="entite">ordinateur</span> appartient à un et un seul
                 <span class="entite">utilisateur</span>
             </p>
         </article>
@@ -205,32 +212,20 @@
             </p>
             <p>
                 une <span class="entite">intervention</span> 
-                est demande par un et un seule 
+                est demandée par un et un seul 
                 <span class="entite">utilisateur</span>
             </p>
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">servise<span><=></span>direction</div>
+            <div class="rg-titre">service<span><=></span>direction</div>
             <p>
-                un <span class="entite">servise</span> est affilié a une
+                un <span class="entite">service</span> est affilié à une
                 <span class="entite">direction</span>
             </p>
             <p>
-               a une <span class="entite">direction</span> est affilié un ou plusieurs
-                <span class="entite">servise</span>
-            </p>
-        </article>
-
-        <article class="rg-item">
-            <div class="rg-titre">servise<span><=></span>batiment <span class="op">*</span></div>
-            <p>
-                un <span class="entite">servise</span> est situé dans un
-                <span class="entite">batiment</span>
-            </p>
-            <p>
-                une <span class="entite">batiment</span> abrite un ou plusieurs
-                <span class="entite">servise</span>
+               à une <span class="entite">direction</span> est affiliée un ou plusieurs
+                <span class="entite">service</span>
             </p>
         </article>
 
@@ -241,8 +236,8 @@
                 <span class="entite">type_equipement</span> 
             </p>
             <p>
-                un <span class="entite">type_equipement</span> peut ne pas 
-                avoir <span class="entite">type_equipement</span> ou en avoir plusieurs
+                un <span class="entite">type_equipement</span> est affilié à un ou plusieurs 
+                <span class="entite">equipements</span>
             </p>
         </article>
 
