@@ -45,8 +45,8 @@
                 </div>
             </article>
 
-            <article class="entite-item">
-                <div class="nom">equipement_reseau</div>
+            <article class="entite-item tosten">
+                <div class="nom">reseau</div>
                 <div class="property">
                     <div class="item id">code_equitR</div>
                     <div class="item">nom_equitR</div>
@@ -60,13 +60,15 @@
                 </div>
             </article>
 
+            <!-- 
             <article class="entite-item gouba">
                 <div class="nom">emplacement</div>
                 <div class="property">
                     <div class="item id">nom_emplacement</div>
                     <div class="item">lib_emplacement</div>
                 </div>
-            </article>
+            </article> 
+            -->
 
             <article class="entite-item gouba">
                 <div class="nom">intervention</div>
@@ -168,52 +170,76 @@
     <section class="rg">
         <h2 class="titre">régle de gestion</h2>
         
-        <article class="rg-item">
-            <div class="rg-titre">utilisateur<span><=></span>equipement</div>
+        <article class="rg-item tosten">
+            <div class="rg-titre">personnel<span><=></span>role</div>
             <p>
-                un <span class="entite">utilisateur</span> a un ou plusieurs 
+                un <span class="entite">personnel</span> a un
+                <span class="entite">role</span>
+            </p>
+            <p>
+                un <span class="entite">role</span> peut ne pas avoir 
+                <span class="entite">personnel</span> ou en avoir plusieurs
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">personnel<span><=></span>equipement</div>
+            <p>
+                un <span class="entite">personnel</span> a un ou plusieurs 
                 <span class="entite">equipements</span>
             </p>
             <p>
                 un <span class="entite">equipement</span> appartient à un et un seul
-                <span class="entite">utilisateur</span>
+                <span class="entite">personnel</span>
             </p>
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">utilisateur<span><=></span>service</div>
+            <div class="rg-titre">personnel<span><=></span>service</div>
             <p>
-                un <span class="entite">utilisateur</span> est dans un et un seul
+                un <span class="entite">personnel</span> est dans un et un seul
                 <span class="entite">service</span>
             </p>
             <p>
                 un <span class="entite">service</span> comprend un ou plusieurs
-                <span class="entite">utilisateurs</span>
+                <span class="entite">personnels</span>
             </p>
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">utilisateur<span><=></span>ordinateur</div>
+            <div class="rg-titre">personnel<span><=></span>ordinateur</div>
             <p>
-                un <span class="entite">utilisateur</span> a un ou plusieurs
+                un <span class="entite">personnel</span> a un ou plusieurs
                 <span class="entite">ordinateurs</span>
             </p>
             <p>
                 un <span class="entite">ordinateur</span> appartient à un et un seul
-                <span class="entite">utilisateur</span>
+                <span class="entite">personnel</span>
             </p>
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">utilisateur<span><=></span>intervention</div>
+            <div class="rg-titre">personnel<span><=></span>intervention</div>
             <p>
-                un <span class="entite">utilisateur</span> peut ne pas demander  
+                un <span class="entite">personnel</span> peut ne pas demander  
                 <span class="entite">intervention</span> ou en demander plusieurs
             </p>
             <p>
                 une <span class="entite">intervention</span> 
                 est demandée par un et un seul 
-                <span class="entite">utilisateur</span>
+                <span class="entite">personnel</span>
+            </p>
+        </article>
+        
+        <article class="rg-item tosten">
+            <div class="rg-titre">personnel<span><=></span>emprunt</div>
+            <p>
+                un <span class="entite">personnel</span> peut ne pas demander
+                <span class="entite">emprunt</span> ou en demander plusieurs
+            </p>
+            <p>
+                un <span class="entite">emprunt</span> est demandée 
+                par un et un seul <span class="entite">personnel</span>
             </p>
         </article>
 
@@ -254,26 +280,38 @@
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">equipement_reseau<span><=></span>intervention</div>
+            <div class="rg-titre">reseau<span><=></span>intervention</div>
             <p>
-                un <span class="entite">equipement_reseau</span> peut ne pas faire l'objet de
+                un <span class="entite">reseau</span> peut ne pas faire l'objet de
                 d'<span class="entite">intervention</span> ou en faire plusieurs 
             </p>
             <p>
                 une <span class="entite">intervention</span> est faite un ou 
-                plusieurs <span class="entite">equipement_reseau</span>
+                plusieurs <span class="entite">reseau</span>
+            </p>
+        </article>
+
+        <article class="rg-item tosten">
+            <div class="rg-titre">reseau<span><=></span>service</div>
+            <p>
+                un <span class="entite">reseau</span> a un 
+                <span class="entite">service</span>
+            </p>
+            <p>
+                un <span class="entite">service</span> peut ne pas contenir 
+                <span class="entite">reseau</span> ou en conrenir plusieurs
             </p>
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">equipement_reseau<span><=></span>emplacement</div>
+            <div class="rg-titre">reseau<span><=></span>type_equipement</div>
             <p>
-                un <span class="entite">equipement_reseau</span> a un 
-                <span class="entite">emplacement</span>
+                un <span class="entite">reseau</span> a un 
+                <span class="entite">type_equipement</span>
             </p>
             <p>
-                un <span class="entite">emplacement</span> peut ne pas contenir 
-                <span class="entite">equipement_reseau</span> ou en conrenir plusieurs
+                un <span class="entite">type_equipement</span>  est affilié à un ou plusieurs
+                <span class="entite">reseau</span>
             </p>
         </article>
 
@@ -445,7 +483,7 @@
             </article>
             
             <article class="entite-item">
-                <div class="nom">utilisateur</div>
+                <div class="nom">personnell</div>
                 <div class="property">
                     <div class="item id">matricule_user</div>
                 </div>
