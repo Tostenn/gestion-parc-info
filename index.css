@@ -213,7 +213,6 @@ header{
     left: var(--rele-size-n);
     width: var(--rele-size);
     border-bottom: 3px solid var(--cl-code);
-    
 }
 :is(.mcd .relation)::after{
     position: absolute;
@@ -263,3 +262,56 @@ footer .author{
     }
 }
 
+
+.entite .tosten{
+    & .nom{
+        background-color: var(--cl-red);
+    }
+    border-color: var(--cl-red);
+}
+.entite .constant{
+    & .nom{
+        background-color: var(--cl-bleu);
+    }
+    border-color: var(--cl-bleu);
+}
+.entite .gouba{
+    & .nom{
+        background-color: var(--cl-yellow);
+    }
+    border-color: var(--cl-yellow);
+}
+.rg .tosten{
+    
+    position: relative;
+    padding: 10px;
+    border: 1px solid var(--cl-red);
+    margin-top: 30px;
+    & span.rg-count{
+        background-color: var(--cl-red) !important;
+        top: -15px;
+        position: absolute;
+    }
+}
+.rg .constant{
+    position: relative;
+    padding: 10px;
+    border: 1px solid var(--cl-bleu);
+    margin-top: 30px;
+    & span.rg-count{
+        background-color: var(--cl-bleu);
+        top: -15px;
+        position: absolute;
+    };
+}
+.rg .gouba{
+    position: relative;
+    padding: 10px;
+    border: 1px solid var(--cl-yellow);
+    margin-top: 30px;
+    & span.rg-count{
+        background-color: var(--cl-yellow);
+        top: -15px;
+        position: absolute;
+    };
+}

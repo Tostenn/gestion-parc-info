@@ -10,7 +10,8 @@ function rgCount(element,n) {
     const span = document.createElement('span')
     span.setAttribute('class','rg-count')
     span.innerHTML = 'rg : <span>'+n+'</span>'
-    element.insertAdjacentElement("beforebegin",span)
+    element.insertAdjacentElement('afterbegin',span)
+    console.log(element);
 }
 
 rgItem.forEach(element => {
