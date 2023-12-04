@@ -29,7 +29,7 @@
                 <div class="nom">etat</div>
                 <div class="property">
                     <div class="item id">num_etat</div>
-                    <div class="item">lib_etat</div>
+                    <div class="item">libelle_etat</div>
                 </div>
             </article>
             
@@ -45,7 +45,7 @@
                 </div>
             </article>
 
-            <article class="entite-item tosten">
+            <article class="entite-item ">
                 <div class="nom">reseau</div>
                 <div class="property">
                     <div class="item id">code_equitR</div>
@@ -60,21 +60,11 @@
                 </div>
             </article>
 
-            <!-- 
-            <article class="entite-item gouba">
-                <div class="nom">emplacement</div>
-                <div class="property">
-                    <div class="item id">nom_emplacement</div>
-                    <div class="item">lib_emplacement</div>
-                </div>
-            </article> 
-            -->
-
-            <article class="entite-item gouba">
+            <article class="entite-item">
                 <div class="nom">intervention</div>
                 <div class="property">
                     <div class="item id">num_int</div>
-                    <div class="item">lib_int</div>
+                    <div class="item">libelle_int</div>
                 </div>
             </article>
 
@@ -85,37 +75,43 @@
                 </div>
             </article>
 
-            <article class="entite-item gouba">
+            <article class="entite-item">
                 <div class="nom">logiciel</div>
                 <div class="property">
                     <div class="item id">nom</div>
-                    <div class="item">lib_log</div>
+                    <div class="item">libelle_log</div>
                     <div class="item">license</div>
                     <div class="item">license_init</div>
                     <div class="item">license_expire</div>
                 </div>
             </article>
            
-            <article class="entite-item gouba">
+            <article class="entite-item">
                 <div class="nom">type_equipement</div>
                 <div class="property">
                     <div class="item id">nom_type</div>
-                    <div class="item">lib_type</div>
+                    <div class="item">libelle_type</div>
                 </div>
             </article>
             
-            <article class="entite-item gouba">
+            <article class="entite-item">
                 <div class="nom">personnel</div>
                 <div class="property">
                     <div class="item id">matr_user</div>
                     <div class="item">nom_user</div>
                     <div class="item">prenom_user</div>
-                    <div class="item">poste_occupe_user <span class="op">*</span></div>
-                    <div class="item">service_user</div>
+                </div>
+            </article>
+            
+            <article class="entite-item">
+                <div class="nom">poste</div>
+                <div class="property">
+                    <div class="item id">numero_poste</div>
+                    <div class="item">nom_poste</div>
                 </div>
             </article>
 
-            <article class="entite-item gouba">
+            <article class="entite-item">
                 <div class="nom">ordinateur</div>
                 <div class="property">
                     <div class="item id">code_ordi</div>
@@ -130,27 +126,27 @@
                 </div>
             </article>
 
-            <article class="entite-item gouba" >
+            <article class="entite-item" >
                 <div class="nom">direction</div>
                 <div class="property">
                     <div class="item id">num_dir</div>
-                    <div class="item">lib_dir</div>
+                    <div class="item">libelle_dir</div>
                 </div>
             </article>
 
-            <article class="entite-item gouba">
+            <article class="entite-item">
                 <div class="nom">Emprunt</div>
                 <div class="property">
                     <div class="item id">num_emp</div>
-                    <div class="item">lib_emp</div>
+                    <div class="item">libelle_emp</div>
                 </div>
             </article>
 
-            <article class="entite-item gouba">
+            <article class="entite-item ">
                 <div class="nom">service</div>
                 <div class="property">
                     <div class="item id">num_sev</div>
-                    <div class="item">lib_ser</div>
+                    <div class="item">libelle_ser</div>
                 </div>
             </article>
 
@@ -159,7 +155,7 @@
                 <div class="nom">batiment </div>
                 <div class="property">
                     <div class="item id">nom_bat</div>
-                    <div class="item">lib_bat</div>
+                    <div class="item">libelle_bat</div>
                 </div>
             </article>
             
@@ -171,6 +167,54 @@
         <h2 class="titre">régle de gestion</h2>
         
         <article class="rg-item tosten">
+            <div class="rg-titre">poste<span><=></span>equipement</div>
+            <p>
+                un <span class="entite">poste</span> a un ou plusieurs 
+                <span class="entite">equipements</span>
+            </p>
+            <p>
+                un <span class="entite">equipement</span> appartient à un et un seul
+                <span class="entite">poste</span>
+            </p>
+        </article>
+
+        <article class="rg-item tosten">
+            <div class="rg-titre">poste<span><=></span>ordinateur</div>
+            <p>
+                un <span class="entite">poste</span> dispose de un 
+                ou plusieurs <span class="entite">ordinateurs</span>
+            </p>
+            <p>
+                un <span class="entite">ordinateur</span> appartient à un et un seul
+                <span class="entite">poste</span>
+            </p>
+        </article>
+
+        <article class="rg-item tosten">
+            <div class="rg-titre">poste<span><=></span>service</div>
+            <p>
+                un <span class="entite">poste</span> est affilié
+                à un <span class="entite">service</span>
+            </p>
+            <p>
+                un <span class="entite">service</span> peut ne pas contenir de
+                <span class="entite">poste</span> ou encontient plusieurs
+            </p>
+        </article>
+
+        <article class="rg-item tosten">
+            <div class="rg-titre">personnel<span><=></span>poste</div>
+            <p>
+                un <span class="entite">personnel</span> a un ou plusieurs
+                <span class="entite">poste</span>
+            </p>
+            <p>
+                un <span class="entite">poste</span> est détenu par
+                un et un seul <span class="entite">personnel</span>
+            </p>
+        </article>
+
+        <article class="rg-item tosten">
             <div class="rg-titre">personnel<span><=></span>role</div>
             <p>
                 un <span class="entite">personnel</span> a un
@@ -179,42 +223,6 @@
             <p>
                 un <span class="entite">role</span> peut ne pas avoir 
                 <span class="entite">personnel</span> ou en avoir plusieurs
-            </p>
-        </article>
-
-        <article class="rg-item">
-            <div class="rg-titre">personnel<span><=></span>equipement</div>
-            <p>
-                un <span class="entite">personnel</span> a un ou plusieurs 
-                <span class="entite">equipements</span>
-            </p>
-            <p>
-                un <span class="entite">equipement</span> appartient à un et un seul
-                <span class="entite">personnel</span>
-            </p>
-        </article>
-
-        <article class="rg-item">
-            <div class="rg-titre">personnel<span><=></span>service</div>
-            <p>
-                un <span class="entite">personnel</span> est dans un et un seul
-                <span class="entite">service</span>
-            </p>
-            <p>
-                un <span class="entite">service</span> comprend un ou plusieurs
-                <span class="entite">personnels</span>
-            </p>
-        </article>
-
-        <article class="rg-item">
-            <div class="rg-titre">personnel<span><=></span>ordinateur</div>
-            <p>
-                un <span class="entite">personnel</span> a un ou plusieurs
-                <span class="entite">ordinateurs</span>
-            </p>
-            <p>
-                un <span class="entite">ordinateur</span> appartient à un et un seul
-                <span class="entite">personnel</span>
             </p>
         </article>
 
@@ -230,7 +238,7 @@
                 <span class="entite">personnel</span>
             </p>
         </article>
-        
+
         <article class="rg-item tosten">
             <div class="rg-titre">personnel<span><=></span>intervention</div>
             <p>
@@ -243,7 +251,7 @@
                 <span class="entite">personnel</span>
             </p>
         </article>
-        
+
         <article class="rg-item tosten">
             <div class="rg-titre">personnel<span><=></span>intervention</div>
             <p>
@@ -266,6 +274,54 @@
             <p>
                 un <span class="entite">emprunt</span> est demandée 
                 par un et un seul <span class="entite">personnel</span>
+            </p>
+        </article>
+
+        <article class="rg-item tosten">
+            <div class="rg-titre">personnel<span><=></span>emprunt</div>
+            <p>
+                un <span class="entite">personnel</span> peut ne pas approuver
+                d'<span class="entite">emprunt</span> ou en approuver plusieurs
+            </p>
+            <p>
+                un <span class="entite">emprunt</span> est approuver 
+                par un et un seul <span class="entite">personnel</span>
+            </p>
+        </article>
+
+        <article class="rg-item tosten">
+            <div class="rg-titre">emprunt<span><=></span>equipement</div>
+            <p>
+                un <span class="entite">emprunt</span> concerne un
+                <span class="entite">equipement</span>
+            </p>
+            <p>
+                un <span class="entite">equipement</span> peut ne pas être
+                <span class="entite">emprunt</span> ou l'être plusieurs
+            </p>
+        </article>
+
+        <article class="rg-item tosten">
+            <div class="rg-titre">emprunt<span><=></span>reseau</div>
+            <p>
+                un <span class="entite">emprunt</span> concerne un
+                <span class="entite">reseau</span>
+            </p>
+            <p>
+                un <span class="entite">reseau</span> peut ne pas être
+                <span class="entite">emprunt</span> ou l'être plusieurs
+            </p>
+        </article>
+
+        <article class="rg-item tosten">
+            <div class="rg-titre">emprunt<span><=></span>ordinateur</div>
+            <p>
+                un <span class="entite">emprunt</span> concerne un
+                <span class="entite">ordinateur</span>
+            </p>
+            <p>
+                un <span class="entite">reseau</span> peut ne pas être
+                <span class="entite">emprunt</span> ou l'être plusieurs
             </p>
         </article>
 
