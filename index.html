@@ -38,25 +38,19 @@
                 <div class="property">
                     <div class="item id">code_equip</div>
                     <div class="item">annee_mise_service</div>
+                    <div class="item">nom_equit</div>
                     <div class="item">serie</div>
                     <div class="item">fonction</div>
                     <div class="item">modele</div>
                     <div class="item">vitesse</div>
-                </div>
-            </article>
-
-            <article class="entite-item ">
-                <div class="nom">reseau</div>
-                <div class="property">
-                    <div class="item id">code_equitR</div>
-                    <div class="item">nom_equitR</div>
-                    <div class="item">seire_equitR</div>
-                    <div class="item">modele_equitR</div>
-                    <div class="item">vitesse_equitR</div>
                     <div class="item">nombre_port</div>
                     <div class="item">administrable</div>
                     <div class="item">onduleur</div>
                     <div class="item">multiprise</div>
+                    <div class="item">process</div>
+                    <div class="item">ram</div>
+                    <div class="item">ddur</div>
+                    <div class="item">mac_ip</div>
                 </div>
             </article>
 
@@ -76,9 +70,9 @@
             </article>
 
             <article class="entite-item">
-                <div class="nom">logiciel</div>
+                <div class="nom">ciel</div>
                 <div class="property">
-                    <div class="item id">nom</div>
+                    <div class="item id">numero_log</div>
                     <div class="item">libelle_log</div>
                     <div class="item">license</div>
                     <div class="item">license_init</div>
@@ -89,7 +83,7 @@
             <article class="entite-item">
                 <div class="nom">type_equipement</div>
                 <div class="property">
-                    <div class="item id">nom_type</div>
+                    <div class="item id">num_type</div>
                     <div class="item">libelle_type</div>
                 </div>
             </article>
@@ -108,21 +102,6 @@
                 <div class="property">
                     <div class="item id">numero_poste</div>
                     <div class="item">nom_poste</div>
-                </div>
-            </article>
-
-            <article class="entite-item">
-                <div class="nom">ordinateur</div>
-                <div class="property">
-                    <div class="item id">code_ordi</div>
-                    <div class="item">modele</div>
-                    <div class="item">seri</div>
-                    <div class="item">process</div>
-                    <div class="item">ram</div>
-                    <div class="item">ddur</div>
-                    <div class="item">mac_ip</div>
-                    <div class="item">etat</div>
-                    <div class="item">type_ordi</div>
                 </div>
             </article>
 
@@ -173,20 +152,8 @@
                 <span class="entite">equipements</span>
             </p>
             <p>
-                un <span class="entite">equipement</span> appartient à un et un seul
-                <span class="entite">poste</span>
-            </p>
-        </article>
-
-        <article class="rg-item tosten">
-            <div class="rg-titre">poste<span><=></span>ordinateur</div>
-            <p>
-                un <span class="entite">poste</span> dispose de un 
-                ou plusieurs <span class="entite">ordinateurs</span>
-            </p>
-            <p>
-                un <span class="entite">ordinateur</span> appartient à un et un seul
-                <span class="entite">poste</span>
+                un <span class="entite">equipement</span> peut ne pas
+                appartient à un <span class="entite">poste</span> ou l'être
             </p>
         </article>
 
@@ -198,7 +165,7 @@
             </p>
             <p>
                 un <span class="entite">service</span> peut ne pas contenir de
-                <span class="entite">poste</span> ou encontient plusieurs
+                <span class="entite">poste</span> ou en contient plusieurs
             </p>
         </article>
 
@@ -301,30 +268,6 @@
             </p>
         </article>
 
-        <article class="rg-item tosten">
-            <div class="rg-titre">emprunt<span><=></span>reseau</div>
-            <p>
-                un <span class="entite">emprunt</span> concerne un
-                <span class="entite">reseau</span>
-            </p>
-            <p>
-                un <span class="entite">reseau</span> peut ne pas être
-                <span class="entite">emprunt</span> ou l'être plusieurs
-            </p>
-        </article>
-
-        <article class="rg-item tosten">
-            <div class="rg-titre">emprunt<span><=></span>ordinateur</div>
-            <p>
-                un <span class="entite">emprunt</span> concerne un
-                <span class="entite">ordinateur</span>
-            </p>
-            <p>
-                un <span class="entite">reseau</span> peut ne pas être
-                <span class="entite">emprunt</span> ou l'être plusieurs
-            </p>
-        </article>
-
         <article class="rg-item">
             <div class="rg-titre">service<span><=></span>direction</div>
             <p>
@@ -361,79 +304,43 @@
             </p>
         </article>
 
-        <article class="rg-item">
-            <div class="rg-titre">reseau<span><=></span>intervention</div>
-            <p>
-                un <span class="entite">reseau</span> peut ne pas faire l'objet de
-                d'<span class="entite">intervention</span> ou en faire plusieurs 
-            </p>
-            <p>
-                une <span class="entite">intervention</span> est faite un ou 
-                plusieurs <span class="entite">reseau</span>
-            </p>
-        </article>
-
         <article class="rg-item tosten">
-            <div class="rg-titre">reseau<span><=></span>service</div>
+            <div class="rg-titre">equipement<span><=></span>service</div>
             <p>
-                un <span class="entite">reseau</span> a un 
+                un <span class="entite">equipement</span>est dans un
                 <span class="entite">service</span>
             </p>
             <p>
                 un <span class="entite">service</span> peut ne pas contenir 
-                <span class="entite">reseau</span> ou en conrenir plusieurs
+                d'<span class="entite">equipement</span> ou en conrenir plusieurs
             </p>
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">reseau<span><=></span>type_equipement</div>
-            <p>
-                un <span class="entite">reseau</span> a un 
-                <span class="entite">type_equipement</span>
-            </p>
-            <p>
-                un <span class="entite">type_equipement</span>  est affilié à un ou plusieurs
-                <span class="entite">reseau</span>
-            </p>
-        </article>
-
-        <article class="rg-item">
-            <div class="rg-titre">ordinateur<span><=></span>logiciel</div>
+            <div class="rg-titre">equipement<span><=></span>ciel</div>
             <p>
                 un <span class="entite">ordinateur</span> peut ne pas diposer de
-                <span class="entite">logiciel</span> ou en diposer plusieurs 
+                <span class="entite">ciel</span> ou en diposer plusieurs 
             </p>
             <p>
-                une <span class="entite">logiciel</span> peut ne pas être installé sur 
+                une <span class="entite">ciel</span> peut ne pas être installé sur 
                 un <span class="entite">ordinateur</span> ou l'être plusieurs fois
             </p>
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">ordinateur<span><=></span>intervention</div>
+            <div class="rg-titre">ciel<span><=></span>intervention</div>
             <p>
-                un <span class="entite">ordinateur</span> peut ne pas faire l'objet 
+                un <span class="entite">ciel</span> peut ne pas faire l'objet 
                 d'<span class="entite">intervention</span> ou en faire plusieurs 
             </p>
             <p>
                 une <span class="entite">intervention</span> est faite sur 
-                aucun ou plusieurs <span class="entite">ordinateur</span>
-            </p>
-        </article>
-
-        <article class="rg-item">
-            <div class="rg-titre">logiciel<span><=></span>intervention</div>
-            <p>
-                un <span class="entite">logiciel</span> peut ne pas faire l'objet 
-                d'<span class="entite">intervention</span> ou en faire plusieurs 
-            </p>
-            <p>
-                une <span class="entite">intervention</span> est faite sur 
-                aucun ou plusieurs <span class="entite">logiciel</span>
+                aucun ou plusieurs <span class="entite">ciel</span>
             </p>
         </article>
         
-    </section>
+    </section> 
 
     <!-- dictionnaire de données -->
     <section class="dd">
@@ -550,7 +457,7 @@
                 </article>
 
                 <article class="entite-item">
-                    <div class="nom">logiciel</div>
+                    <div class="nom">ciel</div>
                     <div class="property">
                         <div class="item id">nom</div>
                     </div>
