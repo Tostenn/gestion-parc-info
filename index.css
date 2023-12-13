@@ -37,6 +37,7 @@ header{
     letter-spacing: 3px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 15px;
+    position: relative;
 }
 .dd .dd-table .dd-item,
 :is(.mcd,.entite) .entite-item{
@@ -64,6 +65,31 @@ header{
     & .op{
         right: 0;
     }
+}
+
+:is(.entite,.rg,) > .titre{
+    transform: translate(50px);
+}
+:is(.dd) > .titre{
+    transform: translate(40px);
+}
+:is(.entite,.rg,.dd) > .titre::after{
+    position: absolute;
+    content: "";
+    background-position: center;
+    background-size: cover;
+    top: 2px;
+    left: -40px;
+    width: 30px;
+    height: 30px;
+    background-image: url(img/window-maximize-solid.svg);
+}
+:is(.rg) > .titre::after{
+    background-image: url(img/cube-solid.svg);
+}
+:is(.dd) > .titre::after{
+    background-image: url(img/book-solid.svg);
+    top: -3px;
 }
 
 @media screen and (max-width:800px) {
