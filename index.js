@@ -11,7 +11,6 @@ function rgCount(element,n) {
     span.setAttribute('class','rg-count')
     span.innerHTML = 'rg : <span>'+n+'</span>'
     element.insertAdjacentElement('afterbegin',span)
-    console.log(element);
 }
 
 rgItem.forEach(element => {
@@ -92,45 +91,50 @@ function insertLineDd(elements,code) {
         }
 
         // type
-        if ([
-            'matricule',
-            'email',
-            'caracteristique',
-            'code',
-            'libelle'
-        ].includes(sig[0])) itemContent(ddType,'an')
+        // if ([
+        //     'matricule',
+        //     'email',
+        //     'caracteristique',
+        //     'code',
+        //     'libelle'
+        // ].includes(sig[0])) itemContent(ddType,'an')
        
-        else if ([
-            'numero',
-            'telephone'
-        ].includes(sig[0])) itemContent(ddType,'n')
-        else itemContent(ddType,'a')
+        // else if ([
+        //     'numero',
+        //     'telephone',
+        //     'num',
+        //     "annee_mise_service"
+        // ].includes(sig[0])) itemContent(ddType,'n')
+        // else itemContent(ddType,'a')
 
         // taille
-        if ([
-            'matricule',
-            'code',
-            'telephone',
-            'numero',
-            "date"
-        ].includes(sig[0])) itemContent(ddTaille,'10')
+        // if ([
+        //     'matricule',
+        //     'code',
+        //     'telephone',
+        //     "date"
+        // ].includes(sig[0])) itemContent(ddTaille,'10')
+        
+        // else if ([
+        //     'num'
+        // ].includes(sig[0])) itemContent(ddTaille,'3')
        
-        else if ([
-            'nom',
-        ].includes(sig[0])) itemContent(ddTaille,'20')
+        // else if ([
+        //     'nom',
+        // ].includes(sig[0])) itemContent(ddTaille,'20')
        
-        else if ([
-            'prenom',
-            'poste',
-            'license',
-            'service',
-            'email'
-        ].includes(sig[0])) itemContent(ddTaille,'30')
+        // else if ([
+        //     'prenom',
+        //     'poste',
+        //     'license',
+        //     'service',
+        //     'email'
+        // ].includes(sig[0])) itemContent(ddTaille,'30')
 
-        else if ([
-            'libelle'
-        ].includes(sig[0])) itemContent(ddTaille,'200')
-        else itemContent(ddTaille,'25')
+        // else if ([
+        //     'libelle'
+        // ].includes(sig[0])) itemContent(ddTaille,'200')
+        // else itemContent(ddTaille,'25')
         
         // nature
         itemContent(ddNt,'<span>el</span> , <span>sig</span>')
@@ -145,10 +149,44 @@ function insertLineDd(elements,code) {
 }
 const entite = document.querySelector('.entite-df')
 const entiteChild = Array.from(entite.children)
-// const mcd = document.querySelector('.mcd .entite-df')
+const mcd = document.querySelector('.mcd .entite-df')
 entiteChild.forEach(
     element => insertLineDd(element.querySelector('.property'),ddCode)
 )
+
+// mode jour | nuit
+const body = document.querySelector('body')
+const butMode = body.querySelector('header button')
+const sat = body.querySelector('.sat')
+const mode = butMode.querySelector('input')
+// let mode = true
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+    butMode.dataset.m = 'jour'
+    mode.checked = !mode.checked
+    satImg()
+}
+else{
+    body.setAttribute('class','j')
+}
+
+function satImg() {
+    const imgSat = sat.querySelector('.img img')
+    imgSat.src = 'img/sat-'+butMode.dataset.m[0]+'.jpeg'
+}
+
+butMode.firstElementChild.onclick = ()=>{
+    if (mode.checked) {
+        body.setAttribute('class','nuit')
+        butMode.dataset.m = 'jour'
+    }
+    else{
+        body.setAttribute('class','j')
+        butMode.dataset.m = 'nuit'
+    }
+    // mode = !mode
+    // console.log(mode)
+    satImg()
+}
 
 // mcd
 // reproduit le meme schema de l'entite

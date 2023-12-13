@@ -10,34 +10,80 @@ html{
     --rele-size:55px;
     --rele-size-n:-55px;
 }
-
+body{
+    transition: all linear .3s;
+    background-color: rgb( 240 241 243 );
+}
 header{
-    padding: 0.5em;
+    /* padding: 0.1em 0.5em; */
     background-color: var(--cl-code);
     color: var(--cl-blanc);
     text-align: center;
     text-transform: uppercase;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & button{
+        background-color: transparent;
+        border: 0;
+        padding: 0.5em;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
+.sat,
 .dd,
 .rg,
 .mcd,
 .entite{
     width: 90%;
     margin: 20px auto;
+    position: relative;
+    overflow: hidden;
 }
 
-:is(.mcd,.entite) .entite-df{
+.dd{overflow: visible;}
+body > .entite::after{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+    background-position: center;
+    margin-bottom: 150%;
+    background-size: cover;
+    background-image: url(img/ent.jpeg);
+    filter: blur(3px);
+}
+.sat .img{
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    & img{
+        transition: all linear .4s;
+    }
+}
+:is(.mcd,.entite,) .entite-df{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
 }
-:is(.dd, .rg, .entite,.mcd) > .titre{
+:is(.dd, .rg, .entite,.mcd,.sat) > .titre{
     text-transform: capitalize;
     letter-spacing: 3px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-bottom: 15px;
     position: relative;
+    width: 100%;
 }
 .dd .dd-table .dd-item,
 :is(.mcd,.entite) .entite-item{
@@ -67,21 +113,22 @@ header{
     }
 }
 
-:is(.entite,.rg,) > .titre{
+/* icone --------------------------- */
+:is(.entite,.rg,.sat,.mcd) > .titre{
     transform: translate(50px);
 }
 :is(.dd) > .titre{
     transform: translate(40px);
 }
-:is(.entite,.rg,.dd) > .titre::after{
+:is(.entite,.rg,.dd,.sat,.mcd) > .titre::after{
     position: absolute;
     content: "";
-    background-position: center;
-    background-size: cover;
     top: 2px;
     left: -40px;
     width: 30px;
     height: 30px;
+    background-position: center;
+    background-size: cover;
     background-image: url(img/window-maximize-solid.svg);
 }
 :is(.rg) > .titre::after{
@@ -91,13 +138,21 @@ header{
     background-image: url(img/book-solid.svg);
     top: -3px;
 }
+:is(.sat) > .titre::after{
+    background-image: url(img/squarespace.svg);
+    top: 5px;
+}
+:is(.mcd) > .titre::after{
+    background-image: url(img/network-wired-solid.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 @media screen and (max-width:800px) {
     .entite .entite-item{
         width: 30%;
     }
 }
-
 @media screen and (max-width:600px) {
     .entite .entite-item{
         width: 45%;
@@ -108,10 +163,21 @@ header{
         width: 100%;
     }
 }
-
+.rg{
+    margin-top: 70px;
+}
 .rg .rg-item{
     position: relative;
     margin: 0 0 30px 10px;
+}
+.rg .rg-item:nth-child(1),
+.rg .rg-item:nth-child(2),
+.rg .rg-item:nth-child(3),
+.rg .rg-item:nth-child(4),
+.rg .rg-item:nth-child(5)
+{
+    
+    width: 49.5%;
 }
 .rg .rg-titre{
     font-weight: bold;
@@ -138,6 +204,19 @@ header{
 .rg span.entite{
     font-weight: bold;
     text-decoration: underline;
+}
+.rg::after{
+    content: "";
+    position: absolute;
+    width: 50%;
+    top: 30px;
+    z-index: -1;
+    right: 0;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(img/rg.jpeg);
+    border-radius: 20px;
 }
 
 .dd .dd-table{
@@ -282,6 +361,7 @@ footer .author{
     color: var(--cl-blanc);
     text-align: center;
     & span{
+        transition: all linear .5s;
         background-color: var(--cl-blanc);
         padding: 0.5em;
         color: var(--cl-code);
@@ -291,7 +371,6 @@ footer .author{
         text-transform: capitalize;
     }
 }
-
 
 .entite .tosten{
     & .nom{
@@ -389,3 +468,179 @@ footer .author{
     width: auto;
     margin-left: 10px;
 }
+@media (prefers-color-scheme: light){
+    body.j,body{
+        color: var(--cl-code);
+        transition: all linear .3s;
+    }
+}
+@media (prefers-color-scheme: dark){
+    body,body.nuit{
+        background-color: var(--cl-code);
+        color: var(--cl-blanc);
+        transition: all linear .3s;
+        & header{
+            transition: all linear .3s;
+            background-color: var(--cl-blanc);
+            color: var(--cl-code);
+            & button {
+                transition: all linear .3s;
+                /* background-color: var(--cl-code); */
+                /* color: var(--cl-blanc); */
+            }
+        }
+        & .rg{
+            & .rg-item{
+                transition: all linear .5s;
+            }
+            & .rg-item:hover{
+                transition: all linear .5s;
+                background-color: #1987549d;
+            }
+        }
+        & :is(.entite,.rg,.dd,.sat) > .titre::after{
+            transition: all linear .5s;
+            background-color: var(--cl-blanc);
+            padding: 1px 5px;
+            transform: translate(-5px);
+        }
+    
+        & .entite{
+            & .entite-item{
+                transition: all linear .3s;
+                background-color: #161b217a;
+                & .nom{
+                    background-color: var(--cl-blanc);
+                    color: var(--cl-code);
+                }
+            }
+        }
+        & .dd .property .item:nth-child(even){
+            background-color: var(--cl-blanc);
+            color: var(--cl-code);
+        }
+        & footer .author{
+            transition: all linear .5s;
+            background-color: var(--cl-blanc);
+            color: var(--cl-code);
+            & span{
+                transition: all linear .5s;
+                background-color: var(--cl-code);
+                color: var(--cl-blanc);
+            }
+        }
+    
+    }
+}
+body.j{
+    color: var(--cl-code);
+    transition: all linear .3s;
+    background-color: rgb( 240 241 243 );
+    & header{
+        transition: all linear .3s;
+        background-color: var(--cl-code);
+        color: var(--cl-blanc);
+        & button {
+            transition: all linear .3s;
+            /* background-color: var(--cl-blanc); */
+            color: var(--cl-code);
+        }
+    }
+    & :is(.entite,.rg,.dd) > .titre::after{
+        transition: all linear .5s;
+        background-color: var(--cl-blanc);
+        padding: 0;
+        transform: translate(-5px);
+    }
+    & .rg{
+        & .rg-item{
+            transition: all linear .5s;
+        }
+        & .rg-item:hover{
+            transition: all linear .5s;
+            background-color: #161b2138;
+        }
+    }
+    & .entite{
+        & .entite-item{
+            transition: all linear .3s;
+            background-color: transparent;
+            & .nom{
+                background-color: var(--cl-code);
+                color: var(--cl-blanc);
+            }
+        }
+    }
+    & .dd .property .item:nth-child(even){
+        background-color: #161b21a8;
+        color: var(--cl-blanc);
+    }
+    & footer .author{
+        transition: all linear .5s;
+        background-color: var(--cl-code);
+        color: var(--cl-blanc);
+        & span{
+            transition: all linear .5s;
+            background-color: var(--cl-blanc);
+            color: var(--cl-code);
+        }
+    }
+}
+body.nuit{
+    background-color: var(--cl-code);
+    color: var(--cl-blanc);
+    transition: all linear .3s;
+    & header{
+        transition: all linear .3s;
+        background-color: var(--cl-blanc);
+        color: var(--cl-code);
+        & button {
+            transition: all linear .3s;
+            /* background-color: var(--cl-code);
+            color: var(--cl-blanc); */
+        }
+    }
+    & .rg{
+        & .rg-item{
+            transition: all linear .5s;
+        }
+        & .rg-item:hover{
+            transition: all linear .5s;
+            background-color: #1987549d;
+        }
+    }
+    & :is(.entite,.rg,.dd) > .titre::after{
+        transition: all linear .5s;
+        background-color: var(--cl-blanc);
+        padding: 1px 5px;
+        transform: translate(-5px);
+    }
+    & .entite{
+        & .entite-item{
+            transition: all linear .3s;
+            background-color: #161b217a;
+            & .nom{
+                background-color: var(--cl-blanc);
+                color: var(--cl-code);
+            }
+        }
+    }
+    & .dd .property .item:nth-child(even){
+        background-color: var(--cl-blanc);
+        color: var(--cl-code);
+    }
+    & footer .author{
+        transition: all linear .5s;
+        background-color: var(--cl-blanc);
+        color: var(--cl-code);
+        & span{
+            transition: all linear .5s;
+            background-color: var(--cl-code);
+            color: var(--cl-blanc);
+        }
+    }
+
+}
+
+
+/* mode jours template ----------- */
