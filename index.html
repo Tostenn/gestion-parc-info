@@ -67,7 +67,7 @@
                 <span class="entite">fonctions</span>
             </p>
             <p>
-                une <span class="entite">fonction</span> peut être concerner 
+                une <span class="entite">fonction</span> est détenu par 
                 un ou plusieurs <span class="entite">utilisateurs</span>
             </p>
         </article>
@@ -88,22 +88,22 @@
             <div class="rg-titre">techniciens<span><=></span>intervention</div>
             <p>
                 un <span class="entite">techniciens</span> peut 
-                effecter plusieurs <span class="entite">intervention</span>
+                operer plusieurs <span class="entite">intervention</span>
             </p>
             <p>
-                une <span class="entite">intervention</span> est éffectuée
-                par un et un seul <span class="entite">techniciens</span>
+                une <span class="entite">intervention</span> est operée
+                par un ou plusieurs <span class="entite">techniciens</span>
             </p>
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">utilisateur<span><=></span>emprunt</div>
             <p>
-                un <span class="entite">utilisateur</span> peut solliciter
+                un <span class="entite">utilisateur</span> peut demander
                 plusieurs <span class="entite">emprunt</span> 
             </p>
             <p>
-                un <span class="entite">emprunt</span> est solliciter 
+                un <span class="entite">emprunt</span> est demandé 
                 par un et un seul <span class="entite">utilisateur</span>
             </p>
         </article>
@@ -123,48 +123,72 @@
         <article class="rg-item">
             <div class="rg-titre">emprunt<span><=></span>equipement</div>
             <p>
-                un <span class="entite">emprunt</span> concerne un
-                <span class="entite">equipement</span>
+                un <span class="entite">emprunt</span> est porter sur un
+                ou plusieurs <span class="entite">equipement</span>
             </p>
             <p>
-                un <span class="entite">equipement</span> peut être
-                <span class="entite">emprunt</span> plusieurs
+                un <span class="entite">equipement</span> peut être porter
+                par plusieurs <span class="entite">emprunt</span>
             </p>
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">direction<span><=></span>sous direction</div>
+            <div class="rg-titre">direction<span><=></span>emplacement</div>
             <p>
-                a une <span class="entite">direction</span> est affilié une ou plusieurs
-                <span class="entite">sous direction</span>
+                une <span class="entite">direction</span> englobe plusieurs
+                <span class="entite">emplacement</span>
             </p>
             <p>
-               à une <span class="entite">sous direction</span> est affiliée une et un seul
-                <span class="entite">direction</span>
+               un <span class="entite">emplacement</span> est englobé
+               dans une <span class="entite">direction</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">sous_direction<span><=></span>emplacement</div>
+            <p>
+                une <span class="entite">sous_direction </span> comporte plusieurs
+                <span class="entite">emplacement</span>
+            </p>
+            <p>
+               un <span class="entite">emplacement</span> est 
+               dans une <span class="entite">sous_direction</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">service<span><=></span>emplacement</div>
+            <p>
+                un <span class="entite">service </span> contenir plusieurs
+                <span class="entite">emplacement</span>
+            </p>
+            <p>
+               un <span class="entite">emplacement</span> est 
+               dans une <span class="entite">service</span>
             </p>
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">equipement<span><=></span>type_equipement</div>
             <p>
-                un <span class="entite">equipement</span> a un 
-                <span class="entite">type_equipement</span> 
+                un <span class="entite">equipement</span> est lié 
+                à un <span class="entite">type_equipement</span> 
             </p>
             <p>
-                un <span class="entite">type_equipement</span> est affilié à un ou plusieurs 
-                <span class="entite">equipements</span>
+                a un <span class="entite">type_equipement</span> est 
+                lié plusieurs <span class="entite">equipements</span>
             </p>
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">equipement<span><=></span>etat</div>
             <p>
-                un <span class="entite">equipement</span> a un 
-                <span class="entite">etat</span> 
+                un <span class="entite">equipement</span> est affilié 
+                à un <span class="entite">etat</span> 
             </p>
             <p>
-                un <span class="entite">etat</span> est affilié à un ou plusieurs 
-                <span class="entite">equipement</span>
+                a un <span class="entite">etat</span> est affilié 
+                plusieurs <span class="entite">equipements</span>
             </p>
         </article>
         
@@ -183,24 +207,12 @@
         <article class="rg-item">
             <div class="rg-titre">equipement<span><=></span>emplacement</div>
             <p>
-                un <span class="entite">equipement</span>est dans un
+                un <span class="entite">equipement</span> est compris dans un
                 <span class="entite">emplacement</span>
             </p>
             <p>
-                un <span class="entite">emplacement</span> peut contenir 
+                un <span class="entite">emplacement</span> comprendre contenir
                 plusieurs <span class="entite">equipement</span>
-            </p>
-        </article>
-
-        <article class="rg-item">
-            <div class="rg-titre">sous_direction<span><=></span>emplacement</div>
-            <p>
-                une <span class="entite">sous_direction</span>peut dispose
-                plusieurs <span class="entite">emplacements</span>
-            </p>
-            <p>
-                un <span class="entite">emplacement</span> peut-être dans 
-                une <span class="entite">sous_direction</span>
             </p>
         </article>
 
@@ -231,12 +243,12 @@
         <article class="rg-item">
             <div class="rg-titre">logiciel<span><=></span>etat</div>
             <p>
-                un <span class="entite">logiciel</span> a un 
-                <span class="entite">etat</span> 
+                a un <span class="entite">logiciel</span> est attribué
+                plusieurs <span class="entite">etats</span> a des periodes données
             </p>
             <p>
-                un <span class="entite">etat</span> est affilié à un ou plusieurs 
-                <span class="entite">logiciel</span>
+                a un <span class="entite">etat</span> est attribué
+                plusieurs <span class="entite">logiciels</span> a des periodes données
             </p>
         </article>
 
@@ -247,15 +259,15 @@
                 un ou plusieurs <span class="entite">equipements</span> 
             </p>
             <p>
-                un <span class="entite">equipement</span> peut-être  
-                <span class="entite">reservation</span> plusieurs
+                un <span class="entite">equipement</span> peut-être 
+                concerner par plusieurs <span class="entite">reservation</span> 
             </p>
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">reservation<span><=></span>utilisateur</div>
             <p>
-                une <span class="entite">reservation</span> concerne
+                une <span class="entite">reservation</span> est faite par
                 un <span class="entite">utilisateur</span> 
             </p>
             <p>
@@ -296,6 +308,14 @@
                 <div class="property">
                     <div class="item id">num_sd</div>
                     <div class="item">libelle_sd</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">service</div>
+                <div class="property">
+                    <div class="item id">num_ser</div>
+                    <div class="item">libelle_ser</div>
                 </div>
             </article>
             
@@ -339,21 +359,9 @@
                 <div class="nom">equipement</div>
                 <div class="property">
                     <div class="item id">code_equip</div>
-                    <div class="item">annee_mise_service</div>
+                    <div class="item">date_mise_service</div>
                     <div class="item">nom_equit</div>
-                    <div class="item">serie</div>
-                    <div class="item">fonction</div>
-                    <div class="item">modele</div>
-                    <div class="item">vitesse</div>
-                    <div class="item">nombre_port</div>
-                    <div class="item">administrable</div>
-                    <div class="item">onduleur</div>
-                    <div class="item">multiprise</div>
-                    <div class="item">process</div>
-                    <div class="item">ram</div>
-                    <div class="item">ddur</div>
-                    <div class="item">mac</div>
-                    <div class="item">ip</div>
+                    <div class="item">carateristique</div>
                 </div>
             </article>
 
@@ -370,12 +378,12 @@
                 </div>
             </article>
 
-            <article class="entite-item">
+            <!-- <article class="entite-item">
                 <div class="nom">date</div>
                 <div class="property">
                     <div class="item id">libelle</div>
                 </div>
-            </article>
+            </article> -->
 
             <article class="entite-item">
                 <div class="nom">logiciel</div>
@@ -604,15 +612,26 @@
     <section class="sat">
         <h2 class="titre">structure d'accés thêorique (SAT)</h2>
         <div class="img">
-            <img src="img/sat-n.jpeg" width="100%" alt="">
+            <img src="img/sat-n.png" width="100%" alt="">
         </div>
     </section>
 
     <!-- MCD -->
     <section class="mcd">
         <h2 class="titre">Modéle concéptuel des données <span>(MCD)</span></h2>
-        <div class="img">
+        <!-- <div class="img">
             <img src="img/Diagramme gestparc.jpg" width="100%" alt="">
+        </div> -->
+
+        <iframe src="/Diagramme gestparc.drawio.html" frameborder="0"></iframe>
+       
+        <!-- <div class="msg">en conception </div> -->
+    </section>
+
+    <section class="mcd mld">
+        <h2 class="titre">Modéle logique des données <span>(MLD)</span></h2>
+        <div class="img">
+            <img src="img/mld.png" width="100%" alt="">
         </div>
        
         <!-- <div class="msg">en conception </div> -->
