@@ -172,7 +172,7 @@ else{
 
 function satImg() {
     const imgSat = sat.querySelector('.img img')
-    imgSat.src = 'img/sat-'+butMode.dataset.m[0]+'.jpeg'
+    imgSat.src = 'img/sat-'+butMode.dataset.m[0]+'.png'
 }
 
 butMode.firstElementChild.onclick = ()=>{

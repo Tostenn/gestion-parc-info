@@ -295,6 +295,11 @@ body > .entite::after{
     width: 100%;
     display: flex;
 }
+.mcd iframe{
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+}
 :is(.mcd) .entite-item{
     width: auto;
 }
@@ -331,6 +336,7 @@ body > .entite::after{
     width: var(--rele-size);
     border-bottom: 3px solid var(--cl-code);
 }
+
 
 .mcd .rls > article{
     display: inline-block;
@@ -643,4 +649,4 @@ body.nuit{
 }
 
 
-/* mode jours template ----------- */
+/* mode jours template -----------*/
