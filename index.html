@@ -47,36 +47,23 @@
     <!-- régle de gestion -->
     <section class="rg">
         <h2 class="titre">régle de gestion</h2>
-        
         <article class="rg-item">
-            <div class="rg-titre">fonction<span><=></span>equipement</div>
+            <div class="rg-titre">utilisateur<span><=></span>equipement</div>
             <p>
-                une <span class="entite">fonction</span> peut disposer 
-                de plusieurs <span class="entite">equipements</span>
+                un <span class="entite">utilisateur</span> peut avoir plusieurs  
+                <span class="entite">equipements</span>
             </p>
             <p>
-                un <span class="entite">equipement</span> peut-être à la disposition
-                d'une <span class="entite">fonction</span>
-            </p>
-        </article>
-
-        <article class="rg-item">
-            <div class="rg-titre">utilisateur<span><=></span>fonction</div>
-            <p>
-                un <span class="entite">utilisateur</span> détient une ou plusieurs
-                <span class="entite">fonctions</span>
-            </p>
-            <p>
-                une <span class="entite">fonction</span> peut être concerner 
-                un ou plusieurs <span class="entite">utilisateurs</span>
-            </p>
+                un <span class="entite">equipement</span> peut appartenir 
+                à un <span class="entite">utilisateur</span>
+            </p>      
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">utilisateur<span><=></span>intervention</div>
             <p>
                 un <span class="entite">utilisateur</span> peut solliciter plusieurs  
-                <span class="entite">intervention</span>
+                <span class="entite">interventions</span>
             </p>
             <p>
                 une <span class="entite">intervention</span> est 
@@ -87,12 +74,12 @@
         <article class="rg-item">
             <div class="rg-titre">techniciens<span><=></span>intervention</div>
             <p>
-                un <span class="entite">techniciens</span> peut 
-                effecter plusieurs <span class="entite">intervention</span>
+                un <span class="entite">technicien</span> peut 
+                effectuer plusieurs <span class="entite">interventions</span>
             </p>
             <p>
                 une <span class="entite">intervention</span> est éffectuée
-                par un et un seul <span class="entite">techniciens</span>
+                par un et un seul <span class="entite">technicien</span>
             </p>
         </article>
 
@@ -100,10 +87,10 @@
             <div class="rg-titre">utilisateur<span><=></span>emprunt</div>
             <p>
                 un <span class="entite">utilisateur</span> peut solliciter
-                plusieurs <span class="entite">emprunt</span> 
+                plusieurs <span class="entite">emprunts</span> 
             </p>
             <p>
-                un <span class="entite">emprunt</span> est solliciter 
+                un <span class="entite">emprunt</span> est sollicité 
                 par un et un seul <span class="entite">utilisateur</span>
             </p>
         </article>
@@ -112,10 +99,10 @@
             <div class="rg-titre">administrateur<span><=></span>emprunt</div>
             <p>
                 un <span class="entite">administrateur</span> peut approuver
-                plusieurs <span class="entite">emprunt</span>
+                plusieurs <span class="entite">emprunts</span>
             </p>
             <p>
-                un <span class="entite">emprunt</span> est approuver 
+                un <span class="entite">emprunt</span> est approuvé 
                 par un et un seul <span class="entite">administrateur</span>
             </p>
         </article>
@@ -123,48 +110,35 @@
         <article class="rg-item">
             <div class="rg-titre">emprunt<span><=></span>equipement</div>
             <p>
-                un <span class="entite">emprunt</span> concerne un
-                <span class="entite">equipement</span>
+                un <span class="entite">emprunt</span> concerne 
+                un ou plusieurs <span class="entite">equipements</span>
             </p>
             <p>
                 un <span class="entite">equipement</span> peut être
-                <span class="entite">emprunt</span> plusieurs
-            </p>
-        </article>
-
-        <article class="rg-item">
-            <div class="rg-titre">direction<span><=></span>sous direction</div>
-            <p>
-                a une <span class="entite">direction</span> est affilié une ou plusieurs
-                <span class="entite">sous direction</span>
-            </p>
-            <p>
-               à une <span class="entite">sous direction</span> est affiliée une et un seul
-                <span class="entite">direction</span>
+                <span class="entite">emprunté</span> plusieurs fois
             </p>
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">equipement<span><=></span>type_equipement</div>
             <p>
-                un <span class="entite">equipement</span> a un 
+                un <span class="entite">equipement</span> appartient à un 
                 <span class="entite">type_equipement</span> 
             </p>
             <p>
-                un <span class="entite">type_equipement</span> est affilié à un ou plusieurs 
-                <span class="entite">equipements</span>
+                A un <span class="entite">type_equipement</span> appartiennent
+                 un ou plusieurs <span class="entite">equipements</span>
             </p>
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">equipement<span><=></span>etat</div>
             <p>
-                un <span class="entite">equipement</span> a un 
-                <span class="entite">etat</span> 
-            </p>
+                un <span class="entite">equipement</span> peut se trouver dans plusieurs
+                <span class="entite">etats</span> à des périodes differentes            </p>
             <p>
-                un <span class="entite">etat</span> est affilié à un ou plusieurs 
-                <span class="entite">equipement</span>
+                un <span class="entite">etat</span> est attribué à plusieurs 
+                <span class="entite">equipements</span>
             </p>
         </article>
         
@@ -172,7 +146,7 @@
             <div class="rg-titre">equipement<span><=></span>intervention</div>
             <p>
                 un <span class="entite">equipement</span> peut faire l'objet de
-                plusieurs <span class="entite">intervention</span>  
+                plusieurs <span class="entite">interventions</span>  
             </p>
             <p>
                 une <span class="entite">intervention</span> est faite 
@@ -183,19 +157,19 @@
         <article class="rg-item">
             <div class="rg-titre">equipement<span><=></span>emplacement</div>
             <p>
-                un <span class="entite">equipement</span>est dans un
-                <span class="entite">emplacement</span>
+                un <span class="entite">equipement</span> peut avoir plusieurs
+                <span class="entite">emplacements</span> à des périodes differentes
             </p>
             <p>
                 un <span class="entite">emplacement</span> peut contenir 
-                plusieurs <span class="entite">equipement</span>
+                plusieurs <span class="entite">equipements</span>
             </p>
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">sous_direction<span><=></span>emplacement</div>
             <p>
-                une <span class="entite">sous_direction</span>peut dispose
+                une <span class="entite">sous_direction</span> dispose de 
                 plusieurs <span class="entite">emplacements</span>
             </p>
             <p>
@@ -205,14 +179,38 @@
         </article>
 
         <article class="rg-item">
-            <div class="rg-titre">equipement<span><=></span>logiciel</div>
+            <div class="rg-titre">direction<span><=></span>emplacement</div>
             <p>
-                un <span class="entite">equipement</span> peut diposer de
-                plusieurs <span class="entite">logiciel</span>
+                une <span class="entite">direction</span> dispose de 
+                plusieurs <span class="entite">emplacements</span>
             </p>
             <p>
-                une <span class="entite">logiciel</span> peut être installé 
-                sur plusieurs un <span class="entite">equipement</span> 
+                un <span class="entite">emplacement</span> peut-être dans 
+                une <span class="entite">direction</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">service<span><=></span>emplacement</div>
+            <p>
+                un <span class="entite">service</span> dispose de 
+                plusieurs <span class="entite">emplacements</span>
+            </p>
+            <p>
+                un <span class="entite">emplacement</span> peut-être dans 
+                un <span class="entite">service</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">equipement<span><=></span>logiciel</div>
+            <p>
+                un <span class="entite">equipement</span> peut diposé de
+                plusieurs <span class="entite">logiciels</span>
+            </p>
+            <p>
+                un <span class="entite">logiciel</span> peut être installé 
+                sur un ou plusieurs <span class="entite">equipements</span> 
             </p>
         </article>
 
@@ -220,19 +218,20 @@
             <div class="rg-titre">logiciel<span><=></span>intervention</div>
             <p>
                 un <span class="entite">logiciel</span> peut faire l'objet 
-                de plusieurs <span class="entite">intervention</span>  
+                de plusieurs <span class="entite">interventions</span>  
             </p>
             <p>
                 une <span class="entite">intervention</span> est faite sur 
-                un ou plusieurs <span class="entite">logiciel</span>
+                un ou plusieurs <span class="entite">logiciels</span>
             </p>
         </article>
         
         <article class="rg-item">
             <div class="rg-titre">logiciel<span><=></span>etat</div>
             <p>
-                un <span class="entite">logiciel</span> a un 
-                <span class="entite">etat</span> 
+                un <span class="entite">logiciel</span> peut se trouver dans
+                plusieurs <span class="entite">etats</span> à des périodes differentes
+
             </p>
             <p>
                 un <span class="entite">etat</span> est affilié à un ou plusieurs 
@@ -247,32 +246,32 @@
                 un ou plusieurs <span class="entite">equipements</span> 
             </p>
             <p>
-                un <span class="entite">equipement</span> peut-être  
-                <span class="entite">reservation</span> plusieurs
+                un <span class="entite">equipement</span> peut-être concerné par plusieurs  
+                <span class="entite">reservations</span>
             </p>
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">reservation<span><=></span>utilisateur</div>
             <p>
-                une <span class="entite">reservation</span> concerne
+                une <span class="entite">reservation</span> est faite par
                 un <span class="entite">utilisateur</span> 
             </p>
             <p>
                 un <span class="entite">utilisateur</span> peut faire  
-                plusieurs <span class="entite">reservation</span> 
+                plusieurs <span class="entite">reservations</span> 
             </p>
         </article>
 
         <article class="rg-item">
             <div class="rg-titre">intervention<span><=></span>type_intervention</div>
             <p>
-                une <span class="entite">intervention</span> a
+                une <span class="entite">intervention</span> appartient à
                 un <span class="entite">type_intervention</span> 
             </p>
             <p>
-                a un <span class="entite">type_intervention</span> est affilié  
-                plusieurs <span class="entite">intervention</span> 
+                à un <span class="entite">type_intervention</span> appartiennent une ou  
+                plusieurs <span class="entite">interventions</span> 
             </p>
         </article>
 
@@ -341,19 +340,8 @@
                     <div class="item id">code_equip</div>
                     <div class="item">annee_mise_service</div>
                     <div class="item">nom_equit</div>
-                    <div class="item">serie</div>
                     <div class="item">fonction</div>
-                    <div class="item">modele</div>
-                    <div class="item">vitesse</div>
-                    <div class="item">nombre_port</div>
-                    <div class="item">administrable</div>
-                    <div class="item">onduleur</div>
-                    <div class="item">multiprise</div>
-                    <div class="item">process</div>
-                    <div class="item">ram</div>
-                    <div class="item">ddur</div>
-                    <div class="item">mac</div>
-                    <div class="item">ip</div>
+                    <div class="item">carateristique</div>
                 </div>
             </article>
 
@@ -370,12 +358,12 @@
                 </div>
             </article>
 
-            <article class="entite-item">
+            <!-- <article class="entite-item">
                 <div class="nom">date</div>
                 <div class="property">
                     <div class="item id">libelle</div>
                 </div>
-            </article>
+            </article> -->
 
             <article class="entite-item">
                 <div class="nom">logiciel</div>
@@ -621,7 +609,7 @@
     <section class="mcd">
         <h2 class="titre">Modéle logique des données <span>(MLD)</span></h2>
         <div class="img">
-            <img src="img/Capture d’écran 2023-12-21 144342.png" width="100%" alt="">
+            <img src="img/mld.png" width="100%" alt="">
         </div>
        
         <!-- <div class="msg">en conception </div> -->

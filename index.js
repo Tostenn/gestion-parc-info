@@ -169,6 +169,7 @@ else{
     body.setAttribute('class','j')
 }
 
+
 function satImg() {
     const imgSat = sat.querySelector('.img img')
     imgSat.src = 'img/sat-'+butMode.dataset.m[0]+'.jpeg'
