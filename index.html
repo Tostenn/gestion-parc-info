@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestion du parc informatique</title>
+    <link rel="stylesheet" href="modeNJ.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="img/user-secret-solid.svg">
+    <meta name="description" content="gestion du parc informatique de la mairie de port bouët">
+    <meta name="author" content="c'est inutile">
+    <meta name="color-scheme" content="dark light"/>
+    <meta property="og:title" content="gestion du parc informatique">
+    <meta property="og:description" content="gestion du parc informatique de la mairie de port bouët">
+    <meta property="og:image" content="https://tostenn.github.io/gestion-parc-info/img/Diagramme%20gestparc.jpg">
+    <meta property="og:url" content="https://tostenn.github.io/gestion-parc-info/">
+</head>
+<body>
+
+    <header>
+        <h1>gestion du parc informatique</h1>
+        <button class="mode" data-m="">
+            <label class="theme-switch">
+                <input type="checkbox" class="theme-switch__checkbox">
+                <div class="theme-switch__container">
+                  <div class="theme-switch__clouds"></div>
+                  <div class="theme-switch__stars-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+                    </svg>
+                  </div>
+                  <div class="theme-switch__circle-container">
+                    <div class="theme-switch__sun-moon-container">
+                      <div class="theme-switch__moon">
+                        <div class="theme-switch__spot"></div>
+                        <div class="theme-switch__spot"></div>
+                        <div class="theme-switch__spot"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+        </button>
+    </header>
+
+    <!-- régle de gestion -->
+    <section class="rg">
+        <h2 class="titre">régle de gestion</h2>
+        
+        <article class="rg-item">
+            <div class="rg-titre">fonction<span><=></span>equipement</div>
+            <p>
+                une <span class="entite">fonction</span> peut disposer 
+                de plusieurs <span class="entite">equipements</span>
+            </p>
+            <p>
+                un <span class="entite">equipement</span> peut-être à la disposition
+                d'une <span class="entite">fonction</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">utilisateur<span><=></span>fonction</div>
+            <p>
+                un <span class="entite">utilisateur</span> détient une ou plusieurs
+                <span class="entite">fonctions</span>
+            </p>
+            <p>
+                une <span class="entite">fonction</span> est détenu par 
+                un ou plusieurs <span class="entite">utilisateurs</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">utilisateur<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">utilisateur</span> peut solliciter plusieurs  
+                <span class="entite">intervention</span>
+            </p>
+            <p>
+                une <span class="entite">intervention</span> est 
+                solliciter par un <span class="entite">utilisateur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">techniciens<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">techniciens</span> peut 
+                operer plusieurs <span class="entite">intervention</span>
+            </p>
+            <p>
+                une <span class="entite">intervention</span> est operée
+                par un ou plusieurs <span class="entite">techniciens</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">utilisateur<span><=></span>emprunt</div>
+            <p>
+                un <span class="entite">utilisateur</span> peut demander
+                plusieurs <span class="entite">emprunt</span> 
+            </p>
+            <p>
+                un <span class="entite">emprunt</span> est demandé 
+                par un et un seul <span class="entite">utilisateur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">administrateur<span><=></span>emprunt</div>
+            <p>
+                un <span class="entite">administrateur</span> peut approuver
+                plusieurs <span class="entite">emprunt</span>
+            </p>
+            <p>
+                un <span class="entite">emprunt</span> est approuver 
+                par un et un seul <span class="entite">administrateur</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">emprunt<span><=></span>equipement</div>
+            <p>
+                un <span class="entite">emprunt</span> est porter sur un
+                ou plusieurs <span class="entite">equipement</span>
+            </p>
+            <p>
+                un <span class="entite">equipement</span> peut être porter
+                par plusieurs <span class="entite">emprunt</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">direction<span><=></span>emplacement</div>
+            <p>
+                une <span class="entite">direction</span> englobe plusieurs
+                <span class="entite">emplacement</span>
+            </p>
+            <p>
+               un <span class="entite">emplacement</span> est englobé
+               dans une <span class="entite">direction</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">sous_direction<span><=></span>emplacement</div>
+            <p>
+                une <span class="entite">sous_direction </span> comporte plusieurs
+                <span class="entite">emplacement</span>
+            </p>
+            <p>
+               un <span class="entite">emplacement</span> est 
+               dans une <span class="entite">sous_direction</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">service<span><=></span>emplacement</div>
+            <p>
+                un <span class="entite">service </span> contenir plusieurs
+                <span class="entite">emplacement</span>
+            </p>
+            <p>
+               un <span class="entite">emplacement</span> est 
+               dans une <span class="entite">service</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">equipement<span><=></span>type_equipement</div>
+            <p>
+                un <span class="entite">equipement</span> est lié 
+                à un <span class="entite">type_equipement</span> 
+            </p>
+            <p>
+                a un <span class="entite">type_equipement</span> est 
+                lié plusieurs <span class="entite">equipements</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">equipement<span><=></span>etat</div>
+            <p>
+                un <span class="entite">equipement</span> est affilié 
+                à un <span class="entite">etat</span> 
+            </p>
+            <p>
+                a un <span class="entite">etat</span> est affilié 
+                plusieurs <span class="entite">equipements</span>
+            </p>
+        </article>
+        
+        <article class="rg-item">
+            <div class="rg-titre">equipement<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">equipement</span> peut faire l'objet de
+                plusieurs <span class="entite">intervention</span>  
+            </p>
+            <p>
+                une <span class="entite">intervention</span> est faite 
+                sur un ou plusieurs <span class="entite">equipements</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">equipement<span><=></span>emplacement</div>
+            <p>
+                un <span class="entite">equipement</span> est compris dans un
+                <span class="entite">emplacement</span>
+            </p>
+            <p>
+                un <span class="entite">emplacement</span> comprendre contenir
+                plusieurs <span class="entite">equipement</span>
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">equipement<span><=></span>logiciel</div>
+            <p>
+                un <span class="entite">equipement</span> peut diposer de
+                plusieurs <span class="entite">logiciel</span>
+            </p>
+            <p>
+                une <span class="entite">logiciel</span> peut être installé 
+                sur plusieurs un <span class="entite">equipement</span> 
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">logiciel<span><=></span>intervention</div>
+            <p>
+                un <span class="entite">logiciel</span> peut faire l'objet 
+                de plusieurs <span class="entite">intervention</span>  
+            </p>
+            <p>
+                une <span class="entite">intervention</span> est faite sur 
+                un ou plusieurs <span class="entite">logiciel</span>
+            </p>
+        </article>
+        
+        <article class="rg-item">
+            <div class="rg-titre">logiciel<span><=></span>etat</div>
+            <p>
+                a un <span class="entite">logiciel</span> est attribué
+                plusieurs <span class="entite">etats</span> a des periodes données
+            </p>
+            <p>
+                a un <span class="entite">etat</span> est attribué
+                plusieurs <span class="entite">logiciels</span> a des periodes données
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">reservation<span><=></span>equipement</div>
+            <p>
+                une <span class="entite">reservation</span> concerne
+                un ou plusieurs <span class="entite">equipements</span> 
+            </p>
+            <p>
+                un <span class="entite">equipement</span> peut-être 
+                concerner par plusieurs <span class="entite">reservation</span> 
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">reservation<span><=></span>utilisateur</div>
+            <p>
+                une <span class="entite">reservation</span> est faite par
+                un <span class="entite">utilisateur</span> 
+            </p>
+            <p>
+                un <span class="entite">utilisateur</span> peut faire  
+                plusieurs <span class="entite">reservation</span> 
+            </p>
+        </article>
+
+        <article class="rg-item">
+            <div class="rg-titre">intervention<span><=></span>type_intervention</div>
+            <p>
+                une <span class="entite">intervention</span> a
+                un <span class="entite">type_intervention</span> 
+            </p>
+            <p>
+                a un <span class="entite">type_intervention</span> est affilié  
+                plusieurs <span class="entite">intervention</span> 
+            </p>
+        </article>
+
+    </section>
+
+    <!-- entité -->
+    <section class="entite">
+        <h2 class="titre">entité</h2>
+        <div class="entite-df">
+            
+            <article class="entite-item" >
+                <div class="nom">direction</div>
+                <div class="property">
+                    <div class="item id">num_dir</div>
+                    <div class="item">libelle_dir</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">sous_direction</div>
+                <div class="property">
+                    <div class="item id">num_sd</div>
+                    <div class="item">libelle_sd</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">service</div>
+                <div class="property">
+                    <div class="item id">num_ser</div>
+                    <div class="item">libelle_ser</div>
+                </div>
+            </article>
+            
+            <article class="entite-item">
+                <div class="nom">etat</div>
+                <div class="property">
+                    <div class="item id">num_etat</div>
+                    <div class="item id">nom_etat</div>
+                    <div class="item">libelle_etat</div>
+                </div>
+            </article>
+            
+            <article class="entite-item">
+                <div class="nom">reservation</div>
+                <div class="property">
+                    <div class="item id">num_res</div>
+                    <div class="item">libelle_res</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">technicien</div>
+                <div class="property">
+                    <div class="item id">num_sup</div>
+                    <div class="item">nom</div>
+                    <div class="item">prenom</div>
+                    <div class="item">téléphone</div>
+                    <div class="item">email</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">emplacement</div>
+                <div class="property">
+                    <div class="item id">num_emp</div>
+                    <div class="item">libelle_emp</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">equipement</div>
+                <div class="property">
+                    <div class="item id">code_equip</div>
+                    <div class="item">date_mise_service</div>
+                    <div class="item">nom_equit</div>
+                    <div class="item">carateristique</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">intervention</div>
+                <div class="property">
+                    <div class="item id">num_int</div>
+                    <div class="item">
+                        nature_int
+                        (m,l,r)
+                    </div>
+                    <div class="item">description_int</div>
+                    <div class="item">observation_int</div>
+                </div>
+            </article>
+
+            <!-- <article class="entite-item">
+                <div class="nom">date</div>
+                <div class="property">
+                    <div class="item id">libelle</div>
+                </div>
+            </article> -->
+
+            <article class="entite-item">
+                <div class="nom">logiciel</div>
+                <div class="property">
+                    <div class="item id">num_log</div>
+                    <div class="item id">nom</div>
+                    <div class="item">libelle_log</div>
+                    <div class="item">license</div>
+                    <div class="item">license_init</div>
+                    <div class="item">license_expire</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">type_equipement</div>
+                <div class="property">
+                    <div class="item id">num_type</div>
+                    <div class="item">libelle_type</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">type_intervention</div>
+                <div class="property">
+                    <div class="item id">num_type_int</div>
+                    <div class="item">libelle_type</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">utilisateur</div>
+                <div class="property">
+                    <div class="item id">matr_user</div>
+                    <div class="item">nom_user</div>
+                    <div class="item">prenom_user</div>
+                    <div class="item">contact_user</div>
+                    <div class="item">email_user</div>
+                    <div class="item">password_user</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">fonction</div>
+                <div class="property">
+                    <div class="item id">numero_fonction</div>
+                    <div class="item">nom_fonction</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">Emprunt</div>
+                <div class="property">
+                    <div class="item id">num_emp</div>
+                    <div class="item">libelle_emp</div>
+                </div>
+            </article>
+
+            <article class="entite-item">
+                <div class="nom">administrateur</div>
+                <div class="property">
+                    <div class="item id">code_admin</div>
+                    <div class="item">nom_admin</div>
+                    <div class="item">prenom_admin</div>
+                    <div class="item">telephone_admin</div>
+                    <div class="item">email_admin</div>
+                    <div class="item">password_admin</div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- dictionnaire de données
+        Get-DnsClientCache pour recuperer tout l'historique meme les effacer
+        ipconfig /flushdns pour effacer l'historiquenn
+    -->
+    <section class="dd">
+        <h2 class="titre">dictionnaire de données</h2>
+        <div class="dd-table">
+
+            <div class="dd-num dd-item">
+                <div class="t">n</div>
+                <div class="property">
+                </div>
+            </div>
+
+            <div class="dd-item dd-code">
+                <div class="t">code</div>
+                <div class="property">
+
+                </div>
+            </div>
+
+            <div class="dd-item dd-sg">
+                <div class="t">signification</div>
+                <div class="property"></div>
+            </div>
+
+            <div class="dd-item dd-type">
+                <div class="t">type</div>
+                <div class="property">
+                    <div class="item">n</div>
+                    <div class="item">an</div>
+                    <div class="item">n</div>
+                    <div class="item">an</div>
+                    <div class="item">n</div>
+                    <div class="item">an</div>
+                    <div class="item">n</div>
+                    <div class="item">an</div>
+                    <div class="item">n</div>
+                    <div class="item">a</div>
+                    <div class="item">a</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">n</div>
+                    <div class="item">date</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">n</div>
+                    <div class="item">n</div>
+                    <div class="item">n</div>
+                    <div class="item">n</div>
+                    <div class="item">n</div>
+                    <div class="item">an</div>
+                    <div class="item">n</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">n</div>
+                    <div class="item">n</div>
+                    <div class="item">a</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">date</div>
+                    <div class="item">n</div>
+                    <div class="item">a</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">date</div>
+                    <div class="item">date</div>
+                    <div class="item">n</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">a</div>
+                    <div class="item">a</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">an</div>
+                    <div class="item">n</div>
+                    <div class="item">a</div>
+                    <div class="item">n</div>
+                    <div class="item">an</div>
+                </div>
+            </div>
+
+            <div class="dd-item dd-taille">
+                <div class="t">taille</div>
+                <div class="property">
+                    <div class="item">3</div>
+                    <div class="item">67</div>
+                    <div class="item">3</div>
+                    <div class="item">63</div>
+                    <div class="item">3</div>
+                    <div class="item">50</div>
+                    <div class="item">3</div>
+                    <div class="item">50</div>
+                    <div class="item">3</div>
+                    <div class="item">20</div>
+                    <div class="item">40</div>
+                    <div class="item">10</div>
+                    <div class="item">40</div>
+                    <div class="item">50</div>
+                    <div class="item">10</div>
+                    <div class="item">20</div>
+                    <div class="item">25</div>
+                    <div class="item">70</div>
+                    <div class="item">80</div>
+                    <div class="item">3</div>
+                    <div class="item">3</div>
+                    <div class="item">1</div>
+                    <div class="item">1</div>
+                    <div class="item">1</div>
+                    <div class="item">30</div>
+                    <div class="item">30</div>
+                    <div class="item">30</div>
+                    <div class="item">30</div>
+                    <div class="item">30</div>
+                    <div class="item">5</div>
+                    <div class="item">3</div>
+                    <div class="item">200</div>
+                    <div class="item">200</div>
+                    <div class="item">10</div>
+                    <div class="item">3</div>
+                    <div class="item">20</div>
+                    <div class="item">200</div>
+                    <div class="item">20</div>
+                    <div class="item">10</div>
+                    <div class="item">10</div>
+                    <div class="item">3</div>
+                    <div class="item">20</div>
+                    <div class="item">depend de la codification des utilisateur</div>
+                    <div class="item">20</div>
+                    <div class="item">40</div>
+                    <div class="item">10</div>
+                    <div class="item">40</div>
+                    <div class="item">10</div>
+                    <div class="item">3</div>
+                    <div class="item">depend de la fonction la plus longue</div>
+                    <div class="item">3</div>
+                    <div class="item">200</div>
+                </div>
+            </div>
+
+            <div class="dd-item dd-nt">
+                <div class="t">nature</div>
+                <div class="property"></div>
+            </div>
+
+            <div class="dd-item dd-ob">
+                <div class="t">observation</div>
+                <div class="property"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SAT -->
+    <section class="sat">
+        <h2 class="titre">structure d'accés thêorique (SAT)</h2>
+        <div class="img">
+            <img src="img/sat-n.png" width="100%" alt="">
+        </div>
+    </section>
+
+    <!-- MCD -->
+    <section class="mcd">
+        <h2 class="titre">Modéle concéptuel des données <span>(MCD)</span></h2>
+        <!-- <div class="img">
+            <img src="img/Diagramme gestparc.jpg" width="100%" alt="">
+        </div> -->
+
+        <iframe src="Diagramme gestiparc.drawio.html" frameborder="0"></iframe>
+       
+        <!-- <div class="msg">en conception </div> -->
+    </section>
+
+    <section class="mcd mld">
+        <h2 class="titre">Modéle logique des données <span>(MLD)</span></h2>
+        <div class="img">
+            <img src="img/mld.png" width="100%" alt="">
+        </div>
+       
+        <!-- <div class="msg">en conception </div> -->
+    </section>
+
+    <footer>
+        <div class="author">copyright <span>c'est inutile</span></div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
