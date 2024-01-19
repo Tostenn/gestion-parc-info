@@ -648,5 +648,15 @@ body.nuit{
 
 }
 
+footer{
+    position: relative;
+}
+.vue{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: auto;
+}
+
 
 /* mode jours template -----------*/
