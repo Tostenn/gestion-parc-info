@@ -1,4 +1,7 @@
 # gestion-parc-info
+
+[![](https://visitcount.itsvg.in/api?id=info&label=Views%20&icon=0&pretty=true)](https://visitcount.itsvg.in)
+
 gestion du parc informatique
 
 ### <b style="text-transform:capitalize;"> bon  à savoir</b>
@@ -31,4 +34,3 @@ git commit -a -m 'message de description'
 ```bash
 git push origin master
 ```
-[![](https://visitcount.itsvg.in/api?id=info&label=Views%20&icon=0&pretty=true)](https://visitcount.itsvg.in)
