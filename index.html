@@ -622,23 +622,77 @@
     <!-- MCD -->
     <section class="mcd">
         <h2 class="titre">Modéle concéptuel des données <span>(MCD)</span></h2>
-        <!-- <div class="img">
-            <img src="img/Diagramme gestparc.jpg" width="100%" alt="">
-        </div> -->
-
+        
         <iframe src="Diagramme gestiparc.drawio.html" frameborder="0"></iframe>
        
         <!-- <div class="msg">en conception </div> -->
     </section>
 
-    <section class="mcd mld">
+    <!-- <section class="mcd mld">
         <h2 class="titre">Modéle logique des données <span>(MLD)</span></h2>
         <div class="img">
             <img src="img/mld.png" width="100%" alt="">
         </div>
-       
+        -->
         <!-- <div class="msg">en conception </div> -->
+    <!-- </section> -->
+    
+    <section class="mcd mct">
+        <h2 class="titre">Modéle concéptuel de traitements <span>(MCT)</span></h2>
+        <p>domaine d'étude <span>mairie de port bouet</span></p>
+        <p>champs d'étude <span>gestion du parc informatique</span></p>
+        
+        
+        <table>
+            <caption>processus : <span>gestion des emprunts</span>
+            </caption>
+            <thead>
+                <th>evenement</th>
+                <th>opération</th>
+                <th>résultat</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>emprunt demander</td>
+                    <td>verification du stock</td>
+                    <td>
+                        <div class="gr">
+                            <div class="dd-item">equipement disponible</div>
+                            <div class="dd-item">equipement non disponible</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>equipement disponible</td>
+                    <td>livraison d'equipement</td>
+                    <td>equipement livrer</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="gr">
+                            <div class="item">equipement livrer</div>
+                            <div class="item">délais arrivé</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="gr">
+                            <div class="item">recouvrement de l'equipement</div>
+                            <div class="item">si equipement remis</div>
+                            <div class="item">sinon equipement égarer</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="gr">
+                            <div class="item">equipement restaurer</div>
+                            <div class="item">avis du maire</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="msg">en conception </div>
     </section>
+
 
     <footer>
         <div class="author"> <span>c'est inutile</span></div>
@@ -648,7 +702,6 @@
               </a>
         </div>
     </footer>
-
 
     <script src="index.js"></script>
 </body>

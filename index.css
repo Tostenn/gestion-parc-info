@@ -658,5 +658,43 @@ footer{
     padding: auto;
 }
 
+table{
+    border-collapse: collapse;
+    border: 1px solid;
+    width: 100%;
+    margin: 20px 0;
+}
+td,th{
+    border: 1px solid;
+    padding: 0.5em;
+}
+td{
+    font-family: 'Courier New', Courier, monospace;
+}
+.mct {
 
-/* mode jours template -----------*/
+    p{
+        font-family: 'Times New Roman', Times, serif;
+        padding: 0.5em;
+        & span{
+            background-color: var(--cl-green);
+            padding: .3em 0.5em;
+            border-radius: 20px;
+            margin: 10px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    }
+    & .gr .item{
+        margin: 10px 0;
+    } 
+} 
+caption{
+    padding: .3em 0.5em;
+    border: 1px solid;
+    & span{
+        margin: 10px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
